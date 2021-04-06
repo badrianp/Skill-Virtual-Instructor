@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Virtual Instructor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <div class="logo">
+        Learn easily for your own good
+    </div>
+
+    <main>
+        <div class="navbar">
+            <a href="./home.html">Home</a>
+            <a href="#">Courses</a>
+            <a href="./proposals.html">Propose a Course</a>
+            <a href="./feedback.html" class="current">Feedback</a>
+            <a href="#" class="button--login">Log In</a>
+        </div>
+        <section class="informations">
+            <h1>Hello there!</h1>
+            <p>In this page you can propose a course to be added in our application by completing the following form.</p>
+            <p>In order to make the process of adding your courses and lessons easier, please attach a PDF, MP4 or any other type of file that could help us decide if your proposal is worth adding to our application</p>
+        </section>
+        <div class="feedback">
+            <form>
+                <p> How do you feel about the general appearance of the website?</p>
+                <input type="radio" id="a_dislike" name="appearance" value="dislike"><label for="a_dislike">Dislike</label>
+                <input type="radio" id="a_partdislike" name="appearance" value="partdislike"><label for="a_partdislike">Partially dislike</label>
+                <input type="radio" id="a_neutral" name="appearance" value="neutral"><label for="a_neutral">Neutral</label>
+                <input type="radio" id="a_partlike" name="appearance" value="partlike"><label for="a_partlike">Partially like</label>
+                <input type="radio" id="a_like" name="appearance" value="like"><label for="a_like">Like</label>
+                <p> Do you like the way courses/lessons are presented to you?</p>
+                <input type="radio" id="p_dislike" name="presentation" value="dislike"><label for="p_dislike">Dislike</label>
+                <input type="radio" id="p_partdislike" name="presentation" value="partdislike"><label for="p_partdislike">Partially dislike</label>
+                <input type="radio" id="p_neutral" name="presentation" value="neutral"><label for="p_neutral">Neutral</label>
+                <input type="radio" id="p_partlike" name="presentation" value="partlike"><label for="p_partlike">Partially like</label>
+                <input type="radio" id="p_like" name="presentation" value="like"><label for="p_like">Like</label>
+                <p> Do you think there is enough diversity in our courses/lessons?</p>
+                <input type="radio" id="d_disagree" name="diversity" value="disagree"><label for="d_disagree">Disagree</label>
+                <input type="radio" id="d_partdisagree" name="diversity" value="partdisagree"><label for="d_partdisagree">Partially disagree</label>
+                <input type="radio" id="d_neutral" name="diversity" value="neutral"><label for="d_neutral">Neutral</label>
+                <input type="radio" id="d_partagree" name="diversity" value="partagree"><label for="d_partagree">Partially agree</label>
+                <input type="radio" id="d_agree" name="diversity" value="agree"><label for="d_agree">Agree</label>
+                <br><br>
+                <label for="user_likes"> What do you like about our website?</label><br><br>
+                <textarea id="user_likes" name="user_likes" rows="5" cols="50" placeholder="I really liked..."></textarea><br>
+                <label for="user_dislikes"> What do you dislike about our website?</label><br><br>
+                <textarea id="user_dislikes" name="user_dislikes" rows="5" cols="50" placeholder="I disliked..."></textarea><br>
+                <label for="user_improvements"> What should we work on to improve your experience while using this website?</label><br><br>
+                <textarea id="user_improvements" name="user_improvements" rows="5" cols="50" placeholder="I think..."></textarea><br>
+                <label for="user_personal"> Anything else you would like to share with us?</label><br><br>
+                <textarea id="user_personal" name="user_personal" rows="5" cols="50" placeholder="Hello..."></textarea>
+                <button type="submit">Submit feedback</button>
+            </form>
+        </div>
+        <div class="contact">
+            <p>If you wish to contact us you can do so using our
+                <br>Email Adress: email_adress@site.domain
+                <br>Phone Number: number
+            </p>
+        </div>
+        <div class="copyright">
+            <p>Copyright: All rights reserved for Gheorghita Razvan-Daniel, Bleoju Adrian</p>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
