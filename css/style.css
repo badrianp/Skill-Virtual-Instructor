@@ -3,7 +3,7 @@ body {
     height: 98.9vh;
     width: 98.9vw;
     margin: 0;
-    background-image: url("./Images/background.png");
+    background-image: url("../Images/background.png");
 }
 
 header {
