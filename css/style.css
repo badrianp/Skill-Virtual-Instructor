@@ -1,13 +1,10 @@
 body {
     position: absolute;
-    height: 98.9vh;
-    width: 98.9vw;
     margin: 0;
     background-image: url("../Images/background.png");
 }
 
 header {
-    padding: 0;
     margin: 0;
     height: 10px;
     width: 98.9vw;
@@ -16,8 +13,8 @@ header {
 }
 
 .logo {
-    padding: 0;
     margin: 0;
+    width: 98.9vw;
     background-color: mediumblue;
     color: rgb(250, 250, 123);
     font-family: 'Franklin Gothic Medium';
@@ -39,11 +36,11 @@ header {
 
 .navbar a {
     margin: 0;
+    padding: 1em 2em;
     border-width: 0;
     border-radius: 0;
     background-color: rgb(111, 97, 236);
     height: 2em;
-    width: 9em;
     float: left;
     color: white;
     text-align: center;
@@ -68,7 +65,12 @@ header {
     float: right;
 }
 
+.navbar .menu--icon {
+    display: none;
+}
+
 main {
+    width: 98.9vw;
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -76,29 +78,26 @@ main {
 
 .informations {
     margin: 0;
-    padding: 3em 5em;
+    padding: 2em 1em;
     text-align: justify;
     background-color: rgb(14, 101, 151);
     font-family: 'Courier New';
     color: rgb(255, 255, 255);
-    padding-left: 10vw;
 }
 
 .courses {
     margin: 0;
-    padding: 3em 5em;
+    padding: 2em 1em;
     height: 80vh;
     text-align: justify;
     background-color: rgb(8, 54, 80);
     font-family: 'Courier New';
     color: rgb(255, 255, 255);
-    padding-left: 10vw;
 }
 
 .gallery {
     margin: 0;
     padding: 0;
-    width: 80vw;
     height: 30vh;
     display: flex;
     flex-direction: row;
@@ -128,7 +127,6 @@ img {
     margin: 0;
     padding: 0em 1em;
     border-radius: 7px;
-    width: 91%;
     color: black;
     background-color: rgba(255, 255, 255, 0.568);
     font-size: 1em;
@@ -239,7 +237,7 @@ form button {
 }
 
 .contact {
-    padding: 10em 15em;
+    padding: 2em 3em;
     text-align: center;
 }
 
@@ -250,6 +248,7 @@ form button {
 }
 
 .copyright {
+    width: 98.9vw;
     padding: 5em 0em;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.678);
@@ -264,4 +263,30 @@ footer {
     background-color: rgba(72, 206, 230, 0.932);
     position: relative;
     align-items: flex-end;
+}
+
+@media screen and (max-width: 729px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+    .navbar a.menu--icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 729px) {
+    .navbar.responsive {
+        position: relative;
+    }
+    .navbar.responsive .menu--icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
