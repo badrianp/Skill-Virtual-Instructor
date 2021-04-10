@@ -6,15 +6,15 @@ body {
 
 header {
     margin: 0;
+    width: 100vw;
     height: 10px;
-    width: 98.9vw;
     background-color: rgba(72, 206, 230, 0.932);
     position: relative;
 }
 
 .logo {
+    width: 100vw;
     margin: 0;
-    width: 98.9vw;
     background-color: mediumblue;
     color: rgb(250, 250, 123);
     font-family: 'Franklin Gothic Medium';
@@ -23,10 +23,10 @@ header {
 }
 
 .navbar {
+    width: 100vw;
     margin: 0;
     padding: 0;
     height: 3em;
-    width: 98.9vw;
     font-family: Verdana;
     font-size: 1em;
     background-color: rgb(111, 97, 236);
@@ -70,7 +70,7 @@ header {
 }
 
 main {
-    width: 98.9vw;
+    width: 100vw;
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -88,7 +88,6 @@ main {
 .courses {
     margin: 0;
     padding: 2em 1em;
-    height: 80vh;
     text-align: justify;
     background-color: rgb(8, 54, 80);
     font-family: 'Courier New';
@@ -98,7 +97,6 @@ main {
 .gallery {
     margin: 0;
     padding: 0;
-    height: 30vh;
     display: flex;
     flex-direction: row;
 }
@@ -106,10 +104,9 @@ main {
 .image {
     margin: 1em;
     border-radius: 10px;
-    padding: 0;
+    padding: 1.5em;
     width: 100%;
-    height: 100%;
-    justify-content: space-around;
+    height: 30vh;
 }
 
 .image:hover .description {
@@ -137,25 +134,24 @@ img {
 
 .proposal {
     margin: 0;
-    padding: 5em 10em;
+    padding: 5em 2em;
     height: auto;
     text-align: justify;
     background-color: rgb(2, 54, 83);
     font-family: 'Courier New';
-    padding-left: 10vw;
 }
 
 form {
     margin: 0;
     padding: 1em 2em;
+    width: 70vw;
     border: solid;
     border-width: 2px;
     border-radius: 8px;
     border-color: cornsilk;
     background-color: rgba(125, 240, 240, 0.815);
-    width: 100%;
     height: inherit;
-    color: rgba(0, 0, 0, 0.925)
+    color: rgba(0, 0, 0, 0.925);
 }
 
 label {
@@ -208,14 +204,14 @@ form button {
     font-family: monospace;
     font-size: 1.5em;
     height: 10vh;
-    width: 10vw;
+    width: 15vw;
     right: 20px;
     float: right;
 }
 
 .feedback {
     margin: 0;
-    padding: 5em 10em;
+    padding: 1em 2em;
     height: auto;
     text-align: justify;
     background-color: rgb(2, 54, 83);
@@ -242,18 +238,17 @@ form button {
 }
 
 .contact p {
-    font-size: 2em;
+    font-size: 1em;
     background-color: rgba(248, 174, 184, 0.925);
     border-radius: 5px;
 }
 
 .copyright {
-    width: 98.9vw;
     padding: 5em 0em;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.678);
     font-family: 'Segoe UI';
-    font-size: 15px;
+    font-size: 1em;
 }
 
 footer {
@@ -273,11 +268,15 @@ footer {
         float: right;
         display: block;
     }
+    .gallery {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 729px) {
     .navbar.responsive {
-        position: relative;
+        position: sticky;
     }
     .navbar.responsive .menu--icon {
         position: absolute;
@@ -288,5 +287,22 @@ footer {
         float: none;
         display: block;
         text-align: left;
+    }
+    form label {
+        padding-right: 1em;
+    }
+    form button {
+        font-size: 1em;
+        width: 20vw;
+    }
+    .feedback {
+        padding: 1em;
+    }
+    .feedback form button {
+        font-size: 1em;
+        width: 20vw;
+    }
+    .feedback form label {
+        font-size: 1em;
     }
 }
