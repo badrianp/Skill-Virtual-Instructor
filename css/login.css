@@ -1,7 +1,5 @@
 header {
-    text-decoration: transparent;
     font-size: 0.8em;
-    /* height: 15vh; */
     border-bottom: 2px solid rgb(111, 97, 236);
     display: flex;
     justify-content: flex-start;
@@ -10,7 +8,6 @@ header {
 
 body {
     font-family: fantasy;
-    /* color: rgb(111, 97, 236); */
     font-size: 100%;
     background-color: whitesmoke;
     height: 85vh;
@@ -42,9 +39,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+    padding-bottom: 1em;
 }
 
 .home-icon {
+    text-decoration: none;
     font-style: unset;
     color: cadetblue;
     font-family: fantasy;
