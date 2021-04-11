@@ -85,7 +85,7 @@ main {
     color: rgb(255, 255, 255);
 }
 
-.courses {
+.courses-gallery {
     margin: 0;
     padding: 2em 1em;
     text-align: justify;
@@ -111,6 +111,11 @@ main {
 
 .image:hover .description {
     display: block;
+}
+
+.image a {
+    width: inherit;
+    height: inherit;
 }
 
 img {
@@ -272,6 +277,15 @@ footer {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    .course-parts {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .browse-courses .courses .course-image {
+        width: 45%;
+        min-width: 45%;
+        max-width: 45%;
+    }
 }
 
 @media screen and (max-width: 729px) {
@@ -305,4 +319,196 @@ footer {
     .feedback form label {
         font-size: 1em;
     }
+}
+
+.browse-courses {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(55, 255, 245);
+}
+
+.browse-courses .search-bar {
+    margin: 0;
+    padding: 0;
+    border-bottom: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.9);
+    border-bottom-width: 2px;
+    width: 100vw;
+    display: inline-block;
+}
+
+.browse-courses .search-bar input[type="text"] {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    padding: 1em 1em;
+    color: rgba(76, 50, 148, 0.815);
+    font-family: Verdana;
+}
+
+.browse-courses .search-bar button[type="submit"] {
+    margin-left: 0;
+}
+
+.browse-courses .search-bar button {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1em 1em;
+    border-radius: 5px;
+    background-color: rgba(76, 50, 148, 0.815);
+    color: white;
+    font-family: fantasy;
+}
+
+.browse-courses .courses {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.browse-courses .courses .course-image {
+    display: flex;
+    margin: 0;
+    padding: 5px;
+    width: 30%;
+}
+
+.browse-courses .courses .course-image img {
+    border-radius: 10px;
+    margin-top: 8px;
+    width: 100%;
+    height: 30vh;
+}
+
+.course-image:hover .description {
+    display: block;
+}
+
+.learning {
+    margin: 0;
+    padding: 2em 1em;
+    text-align: justify;
+    background-color: rgb(80, 224, 188);
+    font-family: 'Courier New';
+    color: rgb(255, 255, 255);
+}
+
+.learning .splash-art {
+    padding: 0;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+    border: solid;
+    width: 75vw;
+    height: 50vh;
+}
+
+.learning .splash-art img {
+    border-radius: 5px;
+}
+
+.learning .course-description {
+    margin-top: 1em;
+    padding: 1em 1em;
+    width: 80vw;
+    background-color: rgba(45, 124, 104, 0.534);
+    border-radius: 8px;
+}
+
+.learning .course-details {
+    margin-top: 1em;
+    margin-right: 0;
+    padding: 1em 2em;
+    width: 50vw;
+    background-color: rgba(164, 230, 213, 0.815);
+    border-radius: 8px;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.527);
+}
+
+.learning .course-details i {
+    margin: 0;
+    padding: 0.55em 0.25em;
+}
+
+.learning .course-details i span {
+    font-style: oblique;
+    padding-left: 0.5em;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.learning .course-parts {
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.learning .course-parts .part {
+    margin: 1em;
+    border-radius: 10px;
+    padding: 1.5em;
+    width: 25vw;
+    height: 30vh;
+}
+
+.learning .course-parts .part img {
+    cursor: pointer;
+    min-width: 200px;
+    transition: 0.3s;
+}
+
+.learning .course-parts .part img:hover {
+    opacity: 0.7;
+}
+
+.learning .course-parts .part .modal--part {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10vh;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    color: cyan;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.learning .course-parts .part .close--button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.learning .course-parts .part .close--button:hover,
+.learning .course-parts .part .close--button:focus {
+    color: rgb(247, 120, 120);
+    text-decoration: none;
+    cursor: pointer;
 }
