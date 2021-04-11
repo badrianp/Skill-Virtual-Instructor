@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholary HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Skill Virtual Assistant</h1>
+    </header>
+    <div role="contentinfo">
+        <ol role="directory">
+            <li>
+                <a href="#introduction">
+                    <span>1. </span> "Introduction"
+                </a>
+                <ol role="directory">
+                    <li>
+                        <a href="#purpose">
+                            <span>1.1 </span> "Purpose"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#conventions">
+                            <span>1.2 </span> "Document Conventions"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#audience">
+                            <span>1.3 </span> "Intended Audience"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#scope">
+                            <span>1.4 </span> "Product Scope"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#references">
+                            <span>1.5 </span> "References"
+                        </a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="#description">
+                    <span>2. </span> "Overall Description"
+                </a>
+                <ol role="directory">
+                    <li>
+                        <a href="#perspective">
+                            <span>2.1 </span> "Product Perspective"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#functions">
+                            <span>2.2 </span> "Product Functions"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#classes">
+                            <span>2.3 </span> "User Classes and Characteristics"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#environment">
+                            <span>2.4 </span> "Operating Environment"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#design">
+                            <span>2.5 </span> "Design and Implementation Constraints"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#documentation">
+                            <span>2.6 </span> "User Documentation"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#dependencies">
+                            <span>2.7 </span> "Assumptions and Dependencies"
+                        </a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="#external-interfaces">
+                    <span>3. </span> "External Interface Requirements"
+                </a>
+                <ol role="directory">
+                    <li>
+                        <a href="#user-interface">
+                            <span>3.1 </span> "User Interfaces"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#hardware-interface">
+                            <span>3.2 </span> "Hardware Interfaces"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#software-interface">
+                            <span>3.3 </span> "Software Interfaces"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#communications-interface">
+                            <span>3.4 </span> "Communications Interfaces"
+                        </a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="#features">
+                    <span>4. </span> "System Features"
+                </a>
+                <ol role="directory">
+                    <li>
+                        <a href="#feature-1">
+                            <span>4.1 </span> "Login/Register"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#feature-2">
+                            <span>4.2 </span> "Learn a course"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#feature-3">
+                            <span>4.3 </span> "Propose a course"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#feature-4">
+                            <span>4.4 </span> "Give feedback"
+                        </a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="#nonfunctional-requirements">
+                    <span>5. </span> "Other Nonfunctional Requirements"
+                </a>
+                <ol>
+                    <li>
+                        <a href="#performance">
+                            <span>5.1 </span> "Performance Requirements"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#safety">
+                            <span>5.2 </span> "Safety Requirements"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#security">
+                            <span>5.3 </span> "Security Requirements"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#software">
+                            <span>5.4 </span> "Software Quality Attributes"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#business">
+                            <span>5.5 </span> "Business Rules"
+                        </a>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div role="contentinfo">
+        <ol role="directory">
+            <dt>Authors</dt>
+            <dd>Gheorghita Razvan-Daniel 2B1 & Bleoju Adrian 2B1</dd>
+        </ol>
+    </div>
+    <section id="introduction" role="doc-introduction">
+        <h2><span>1. </span> "Introduction" </h2>
+        <section id="purpose">
+            <h3><span>1.1 </span>"Purpose"</h3>
+            <p>The purpose of this document is to present a detailed description of the web application Skill Virtual Assistant(SkiVI). It will explain the purpose and features of the application, the interfaces, what it will do and how it operates. This
+                document is intended for users of the application and potential developers.</p>
+            <p>SkiVi is a modular Web application with the role of a virtual instructor that offers sets of activities and instructional resources for learning/developing some skills such as playing an instrument, ressuscitaion procedures, origami and others.</p>
+            <p>Each skill will be implemented using an independent Web microservice that will be updated on demand or automatically.</p>
+            <p>The base functionalities of the system will be offered by a REST or GraphQL API.</p>
+        </section>
+        <section id="conventions">
+            <h3><span>1.2 </span>"Document Conventions"</h3>
+            <p>This Document was created based on the IEEE template for System Requirement Specification Documents.</p>
+        </section>
+        <section id="audience">
+            <h3><span>1.3 </span>"Intended Audience and Reading Suggestions"</h3>
+            <ul>
+                <li>Typical Users, such as students, passionate persons for a given domain, teachers, etc. who want to use SkiVI for learning a new hobby</li>
+                <li>Advanced/Professional Users, such as researchers, experts, who want to use SkiVI to help in adding quality courses and lessons</li>
+                <li>Programmers who are interested in working on the project by further developing it, fix existing bugs, improve UI and others</li>
+            </ul>
+        </section>
+        <section id="scope">
+            <h3><span>1.4 </span>"Product Scope"</h3>
+            <p>SkiVI is a web application that people can use to learn a new hobby, discover interesting facts and tricks, in order to relax, have some fun, or improve in different domains.</p>
+        </section>
+        <section id="references">
+            <h3><span>1.5 </span>"References"</h3>
+            <p>SkiVi's website:</p>
+            <p>TBD</p>
+            <p>SkiVI's GitHub page:</p>
+            <a href="https://github.com/bleojua/Skill-Virtual-Instructor.git">https://github.com/bleojua/Skill-Virtual-Instructor.git</a></p>
+            <p>Scholary document specifications:</p>
+            <p><a href="https://w3c.github.io/scholarly-html/#structure">https://w3c.github.io/scholarly-html/#structure</a></p>
+            <p>IEEE Template for System Requirement Specification Documents:</p>
+            <p><a href="https://github.com/rick4470/IEEE-SRS-Tempate">https://github.com/rick4470/IEEE-SRS-Tempate</a></p>
+        </section>
+    </section>
+    <section id="description">
+        <h2><span>2. </span>"Overall Description"</h2>
+        <section id="perspective">
+            <h3><span>2.1 </span>"Product Perspective"</h3>
+            <p>SkiVI was developed for everyone who is interested in learning new hobbies, skills, informations, facts,etc. who wants either to just have some relaxing time, or to properly learn something useful that can be put into reality.</p>
+            <p>It can provide feedback to its users, get feedback from them, and was developed to run on web browsers.</p>
+        </section>
+        <section id="functions">
+            <h3><span>2.2 </span>"Product Functions"</h3>
+            <p>Main Pages:</p>
+            <ul>
+                <li>Home: The home page of the application, it contains basic informations about it and some courses reccomended by the developers.</li>
+                <li>Courses: The main page of the application, it contains the courses and lessons available, it also contains a search function for them using keywords or labels.</li>
+                <li>Course page: A page that appears only when an user selects a course or lesson, in which he can see its description, details, and its contents.</li>
+                <li>Propose a course: A form page in which users can propose a course or lesson to be added in the application.</li>
+                <li>Feedback: A form page in which users can give feedback to the application</li>
+                <li>Log In: A log-in or register page in which users can log into their accounts or make new accounts.</li>
+            </ul>
+        </section>
+        <section id="classes">
+            <h3><span>2.3 </span>"User Classes and Characteristics"</h3>
+            <ul>
+                <li>
+                    Typical Users (students, teachers, anyone mostly), who want to use SkiVI for learning.
+                </li>
+                <li>
+                    Advanced/Professional Users (experts, researchers), who want to use SkiVI to broaden its contents.
+                </li>
+                <li>
+                    Programmers who are interested in working on the project by further developing it or fixing bugs.
+                </li>
+            </ul>
+        </section>
+        <section id="environment">
+            <h3><span>2.4 </span>"Operating Environment"</h3>
+            <p>Any Operating System with GUI that has access to an web browser.</p>
+        </section>
+        <section id="design">
+            <h3><span>2.5 </span>"Design and Implementation Constraints</h3>
+            <p>For now it only uses HTML:5, CSS, and JavaScript, later we plan to use MySQL and other API's for the functionalities.</p>
+        </section>
+        <section id="documentation">
+            <h3><span>2.6 </span>"User Documentation"</h3>
+            <p>TBD</p>
+        </section>
+        <section id="dependencies">
+            <h3><span>2.7 </span>"Assumtions and Dependencies"</h3>
+            <p>SkiVI uses some JavaScript therefore requires browsers that support it.</p>
+        </section>
+    </section>
+    <section id="external-interfaces">
+        <h2><span>3. </span>"External Interface Requirements"</h2>
+        <section id="user-interface">
+            <h3><span>3.1 </span>"User Interface"</h3>
+            <ol>
+                <li>
+                    SkiVI Home Screen:
+                    <br>
+                    <img src="home.jpg" alt="Home.jpg" style="width: 55%; height: 35%;">
+                </li>
+                <li>
+                    SkiVI Courses Screen:
+                    <br>
+                    <img src="courses.jpg" alt="Courses.jpg" style="width: 55%; height: 35%;">
+                </li>
+                <li>
+                    SkiVI Propose a Course Screen:
+                    <br>
+                    <img src="proposal.jpg" alt="Proposal.jpg" style="width: 55%; height: 35%;">
+                </li>
+                <li>
+                    SkiVI Feedback Screen:
+                    <br>
+                    <img src="feedback.jpg" alt="Feedback.jpg" style="width: 55%; height: 35%;">
+                </li>
+                <li>
+                    SkiVI Log In/Register Screen:
+                    <br>
+                    <img src="login.jpg" alt="Login.jpg" style="width: 55%; height: 35%;">
+                    <br>
+                    <img src="register.jpg" alt="Register.jpg" style="width: 55%; height: 35%;">
+                </li>
+            </ol>
+        </section>
+        <section id="hardware-interface">
+            <h3><span>3.2 </span>"Hardware Interfaces"</h3>
+            <p>Compatible graphics card for displaying JavaScript, images, videos, compatible web browsers. CPU, Ram specifications: TBA</p>
+        </section>
+        <section id="software-interface">
+            <h3><span>3.3 </span>"Software Interfaces"</h3>
+            <p>SkiVI requires browsers that can support JavaScript, and will be connect with a MySQL database for account informations.</p>
+        </section>
+        <section id="communications-interface">
+            <h3><span>3.4 </span>"Communications Interfaces"</h3>
+            <p>SkiVI requires an internet connection to authentificate users, show courses and their contents, give proposals and feedback.</p>
+        </section>
+    </section>
+    <section id="features">
+        <h2><span>4. </span>"System Features"</h2>
+        <p>This section presents SkiVI's most prominent features and explains how they can be used and the results they will give back to the user.</p>
+        <section id="feature-1">
+            <h3><span>4.1 </span>"Login/Register"</h3>
+            <p>Unlogged Users can use this function in order to create or connect to their accounts, that will keep track of their progress.</p>
+            <p>The application will store the users credentials in a MySQL database for easier access to their accounts.</p>
+        </section>
+        <section id="feature-2">
+            <h3><span>4.2 </span>"Learn a course"</h3>
+            <p>Logged Users can browse the application's courses and lessons and choose one that interests them.</p>
+            <p>After choosing one, they are sent to it's own page that contains details and their contents where they will learn the skills.</p>
+            <p>(Optional) We will try to implement a function to keep track of their progress.</p>
+        </section>
+        <section id="feature-3">
+            <h3><span>4.3 </span>"Propose a course"</h3>
+            <p>Logged Users can propose a course or lesson to be added in the application.</p>
+            <p>After completing the form they will receive via e-mail our response about their proposal with further instructions to follow.</p>
+        </section>
+        <section id="feature-4">
+            <h3><span>4.4 </span>"Give Feedback"</h3>
+            <p>Logged Users can give feedback for our web application about it's general view, what they like/dislike about it, and anything else they would like to share.</p>
+        </section>
+    </section>
+    <section id="nonfunctional-requirements">
+        <h2><span>5. </span>"Other Nonfunctional Requirements"</h2>
+        <section id="performance">
+            <h2><span>5.1 </span>"Performance Requirements"</h2>
+            <p>SkiVI requires a system that has access to Web browsers and that can display images, videos etc. Performance depends on system RAM, browser CPU & RAM consumption.</p>
+        </section>
+        <section id="safety">
+            <h2><span>5.2 </span>"Safety Requirements"</h2>
+            <p>Developers will try to update SkiVI constantly based on user's feedback. If there is a bug or error, users can use Feedback function to report it.</p>
+        </section>
+        <section id="security">
+            <h2><span>5.3 </span>"Security Requirements"</h2>
+            <p>SkiVI does not have any security requirements so any type of user can use it wihour any additional privileges.</p>
+        </section>
+        <section id="software">
+            <h2><span>5.4 </span>"Software Quality Attributes"</h2>
+            <p>SkiVI provides the users with intuitive features. Due to its design, it is easy to use the interface, derive the function of each page, and doesn't overload the user with content.</p>
+        </section>
+        <section id="business">
+            <h2><span>5.5 </span>"Business Rules"</h2>
+            <p>TBD</p>
+        </section>
+    </section>
+</body>
+
+</html>
