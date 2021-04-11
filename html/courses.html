@@ -5,97 +5,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Virtual Instructor</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Courses</title>
+    <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <header>
-    </header>
 
     <div class="logo">
         Learn easily for your own good
     </div>
 
+    <div class="navbar" id="navMenu">
+        <a href="./home.html">Home</a>
+        <a href="./courses.html" class="current">Courses</a>
+        <a href="./proposals.html">Propose a Course</a>
+        <a href="./feedback.html">Feedback</a>
+        <a href="./login.html" class="button--login">Log In</a>
+        <a href="javascript:void(0);" class="menu--icon" onclick="openNavMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" name="search" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <button id="DIY">DIY</button>
+        <button id="Educational">Educational</button>
+        <button id="Music">Music</button>
+        <button id="Medical">Medical</button>
+        <button id="Relaxation">Relaxation</button>
+    </div>
+
+    <div class="side-div">
+        <input class="search-courses" placeholder="search category.." type="search" name="search-courses" id="search-courses">
+        <hr class="line-separator">
+
+        <a class="category-button" name="origami"> D I Y </a>
+        <a class="category-button" href="goToCategory.html" name="harpischord">Instruments</a>
+        <a class="category-button" href="goToCategory.html" name="lifesaving">Lifesaving</a>
+        <a class="category-button" href="goToCategory.html" name="educational">Educational</a>
+        <a class="category-button" href="goToCategory.html" name="relaxation">Relaxation</a>
+
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+        <a class="category-button" href="goToCategory.html">scroll-material</a>
+    </div>
+
     <main>
-        <div class="navbar" id="navMenu">
-            <a href="./home.html">Home</a>
-            <a href="./courses.html" class="current">Courses</a>
-            <a href="./proposals.html">Propose a Course</a>
-            <a href="./feedback.html">Feedback</a>
-            <a href="./login.html" class="button--login">Log In</a>
-            <a href="javascript:void(0);" class="menu--icon" onclick="openNavMenu()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-        <div class="browse-courses">
-            <div class="search-bar">
-                <input type="text" name="search" placeholder="Search...">
-                <button type="submit"><i class="fa fa-search"></i></button>
-                <button id="DIY">DIY</button>
-                <button id="Educational">Educational</button>
-                <button id="Music">Music</button>
-                <button id="Medical">Medical</button>
-                <button id="Relaxation">Relaxation</button>
+        <div class="content-div">
+
+            <div class="course-div origami hide" id="origami">
+                <h4 class="course-title">Learn how to make a crane - Origami Lesson</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/origami.jpg" alt="Origami.jpg"></a>
+                <h4 class="course-author">Michael Scofield</h4>
             </div>
-            <div class="courses">
-                <div class="course-image">
-                    <a href="course_example.html">
-                        <img src="../Images/origami.jpg" alt="Origami.jpg">
-                    </a>
-                    <p class="description">Learn how to make a crane - Origami Lesson
-                        <br> Author name
-                    </p>
-                </div>
-                <div class="course-image">
-                    <a href="course_example.html">
-                        <img src="../Images/clavecina.jpg" alt="Harpischord.jpg">
-                    </a>
-                    <p class="description">Let's play the Harpischord
-                        <br> Author name
-                    </p>
-                </div>
-                <div class="course-image">
-                    <a href="course_example.html">
-                        <img src="../Images/cpr.jpg" alt="CPR.jpg">
-                    </a>
-                    <p class="description">Learn the basics of CPR
-                        <br> Author name
-                    </p>
-                </div>
-                <div class="course-image">
-                    <a href="course_example.html">
-                        <img src="../Images/cpr.jpg" alt="CPR.jpg">
-                    </a>
-                    <p class="description">Learn the basics of CPR
-                        <br> Author name
-                    </p>
-                </div>
-                <div class="course-image">
-                    <a href="course_example.html">
-                        <img src="../Images/origami.jpg" alt="Origami.jpg">
-                    </a>
-                    <p class="description">Learn how to make a crane - Origami Lesson
-                        <br> Author name
-                    </p>
-                </div>
+
+            <div class="course-div hide" id="harpischord">
+                <h4 class="course-title">Let's play the Harpischord</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/clavecina.jpg" alt="Harpischord.jpg"></a>
+                <h4 class="course-author">Theodor "T-BAG" Bagwell</h4>
             </div>
-        </div>
-        <div class="contact">
-            <p>If you wish to contact us you can do so using our
-                <br>Email Adress: email_adress@site.domain
-                <br>Phone Number: number
-            </p>
-        </div>
-        <div class="copyright">
-            <p>Copyright: All rights reserved for Gheorghita Razvan-Daniel, Bleoju Adrian</p>
-        </div>
+            <div class="course-div origami hide" id="origami">
+                <h4 class="course-title">Learn how to make a crane - Origami Lesson</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/origami.jpg" alt="Origami.jpg"></a>
+                <h4 class="course-author">Michael Scofield</h4>
+            </div>
+
+            <div class="course-div hide" id="harpischord">
+                <h4 class="course-title">Let's play the Harpischord</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/clavecina.jpg" alt="Harpischord.jpg"></a>
+                <h4 class="course-author">Theodor "T-BAG" Bagwell</h4>
+            </div>
+            <div class="course-div hide" id="cpr">
+                <h4 class="course-title">Learn the basics of CPR</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/cpr.jpg" alt="CPR.jpg"></a>
+                <h4 class="course-author">Sara Tancredi</h4>
+            </div>
+            <div class="course-div hide" id="cpr">
+                <h4 class="course-title">Learn the basics of CPR</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/cpr.jpg" alt="CPR.jpg"></a>
+                <h4 class="course-author">Sara Tancredi</h4>
+            </div>
+
+            <div class="course-div origami hide" id="origami">
+                <h4 class="course-title">Learn how to make a crane - Origami Lesson</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/origami.jpg" alt="Origami.jpg"></a>
+                <h4 class="course-author">Michael Scofield</h4>
+            </div>
+
+            <div class="course-div hide" id="harpischord">
+                <h4 class="course-title">Let's play the Harpischord</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/clavecina.jpg" alt="Harpischord.jpg"></a>
+                <h4 class="course-author">Theodor "T-BAG" Bagwell</h4>
+            </div>
+            <div class="course-div origami hide" id="origami">
+                <h4 class="course-title">Learn how to make a crane - Origami Lesson</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/origami.jpg" alt="Origami.jpg"></a>
+                <h4 class="course-author">Michael Scofield</h4>
+            </div>
+
+            <div class="course-div hide" id="harpischord">
+                <h4 class="course-title">Let's play the Harpischord</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/clavecina.jpg" alt="Harpischord.jpg"></a>
+                <h4 class="course-author">Theodor "T-BAG" Bagwell</h4>
+            </div>
+            <div class="course-div hide" id="cpr">
+                <h4 class="course-title">Learn the basics of CPR</h4>
+                <a href="course_example.html"><img class="course-image" src="../Images/cpr.jpg" alt="CPR.jpg"></a>
+                <h4 class="course-author">Sara Tancredi</h4>
+            </div>
     </main>
 
-    <footer>
-    </footer>
+    <div class="contact">
+        <p>If you wish to contact us you can do so using our
+            <br>Email Adress: email_adress@site.domain
+            <br>Phone Number: number
+        </p>
+    </div>
+
+    <div class="copyright">
+        <p>©Copyright: All rights reserved for Gheorghita Razvan-Daniel, Bleoju Adrian</p>
+    </div>
+
     <script src="../js/navbar.js"></script>
+    <script src="../js/categoryDemo.js"></script>
 </body>
 
 </html>
