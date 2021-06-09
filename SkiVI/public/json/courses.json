@@ -1,0 +1,5 @@
+[
+    {"id": "origami", "title": "Learn how to make a crane - Origami Lesson", "image": "Images/origami.jpg", "author": "Michael Scofield"},
+    {"id": "harpischord", "title": "Let's play the Harpischord", "image": "Images/clavecina.jpg", "author": "Theodor (T-BAG) Bagwell"},
+    {"id": "cpr", "title": "Learn the basics of CPR", "image": "Images/cpr.jpg", "author": "Sara Tancredi"}
+]

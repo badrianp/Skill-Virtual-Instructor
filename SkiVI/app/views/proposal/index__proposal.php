@@ -15,6 +15,10 @@
     <header>
     </header>
 
+    <?php
+    session_start();
+    ?>
+
     <div class="logo">
         Learn easily for your own good
     </div>
@@ -25,7 +29,7 @@
             <a href="<?= $data['syntax'] ?>course">Courses</a>
             <a href="<?= $data['syntax'] ?>proposal" class="current">Propose a Course</a>
             <a href="<?= $data['syntax'] ?>feedback">Feedback</a>
-            <a href="<?= $data['syntax'] ?>login" class="button--login">Log In</a>
+            <a href="<?= $data['syntax'] ?>auth" class="button--login"><?= (isset($_SESSION['username']) ? ("Log Out") : ("Log In")) ?></a>
             <a href="javascript:void(0);" class="menu--icon" onclick="openNavMenu()">
                 <i class="fa fa-bars"></i>
             </a>
