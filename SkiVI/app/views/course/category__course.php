@@ -12,9 +12,7 @@
 </head>
 
 <body>
-    <?php
-    session_start();
-    ?>
+
     <div class="logo">
         Learn easily for your own good
     </div>

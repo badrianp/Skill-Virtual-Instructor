@@ -14,7 +14,15 @@ class Auth extends Controller
             logout();
         }
 
-        $this->view('auth/index__auth', ['syntax' => $to__root, 'params' => $data]);
+        $this->view('auth/auth__login', ['syntax' => $to__root, 'params' => $data]);
+    }
+
+    public function index__register($data)
+    {
+        $to__root = $data[0];
+        unset($data[0]);
+
+        $this->view('auth/auth__register', ['syntax' => $to__root, 'params' => $data]);
     }
 
     public function login($data)
@@ -35,7 +43,7 @@ class Auth extends Controller
         $user = get__user($username, $password);
 
         if (!$user) {
-            echo "Missing account!";
+            echo "Invalid credentials ...";
             // $this->view('errors/wrong-credentials', $data);
         } else {
             login($user);

@@ -1,5 +1,7 @@
 <?php
 
+include_once "../app/models/auth.utils.php";
+
 class Course extends Controller
 {
     public function index($data)
