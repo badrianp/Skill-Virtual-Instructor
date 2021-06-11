@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload='wrongs("<?= $data['param1'] ?>","<?= (isset($data['param2']) ? $data['param2'] : '') ?>")'>
 
 
     <header class="header">

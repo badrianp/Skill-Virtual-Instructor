@@ -7,17 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skill Virtual Instructor</title>
     <link rel="stylesheet" href="<?= $data['syntax'] ?>css/style.css">
+    <link rel="stylesheet" href="<?= $data['syntax'] ?>css/courses.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="<?= $data['syntax'] ?>js/navbar.js" async></script>
+    <script src="<?= $data['syntax'] ?>js/home.js" async></script>
 </head>
 
-<body>
+<body onload="getCourses(3, `<?= $data['syntax'] ?>`)">
     <header>
     </header>
 
-    <?php
-    session_start();
-    ?>
     <div class="logo">
         Learn easily for your own good
     </div>
@@ -42,33 +41,8 @@
         <section class="courses-gallery">
             <h1>We trust our teachers to give you the best learning experience</h1>
             <p>Each course is made by trusted individuals that prooved to have exensive knowledge about the topic it presents</p>
-            <p>Here are some courses we think might interest you</p>
-            <div class="gallery">
-                <div class="image">
-                    <a href="<?= $data['syntax'] ?>course/example">
-                        <img src="<?= $data['syntax'] ?>Images/origami.jpg" alt="Origami.jpg">
-                    </a>
-                    <p class="description">Learn how to make a crane - Origami Lesson
-                        <br> Author name
-                    </p>
-                </div>
-                <div class="image">
-                    <a href="<?= $data['syntax'] ?>course/example">
-                        <img src="<?= $data['syntax'] ?>Images/clavecina.jpg" alt="Harpischord.jpg">
-                    </a>
-                    <p class="description">Let's play the Harpischord
-                        <br> Author name
-                    </p>
-                </div>
-                <div class="image">
-                    <a href="<?= $data['syntax'] ?>course/example">
-                        <img src="<?= $data['syntax'] ?>Images/cpr.jpg" alt="CPR.jpg">
-                    </a>
-                    <p class="description">Learn the basics of CPR
-                        <br> Author name
-                    </p>
-                </div>
-            </div>
+            <p id="lastP">Here are some courses we think might interest you</p>
+
         </section>
         <div class="contact">
             <p>If you wish to contact us you can do so using our

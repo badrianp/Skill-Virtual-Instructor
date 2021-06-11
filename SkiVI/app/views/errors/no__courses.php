@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="<?= $data['syntax'] ?>css/courses.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="<?= $data['syntax'] ?>js/navbar.js" async></script>
-    <script src="<?= $data['syntax'] ?>js/courses.js" async></script>
+    <script src="<?= $data['syntax'] ?>js/categoryDemo.js" async></script>
 </head>
 
-<body onload="getCourses(`<?= $data['category'] ?>`, `<?= $data['syntax'] ?>`)">
+<body>
+
+
 
     <div class="logo">
         Learn easily for your own good
@@ -49,13 +51,15 @@
         <a class="category-button" href="<?= $data['syntax'] ?>course/index/educational" id="educational">Educational</a>
         <a class="category-button" href="<?= $data['syntax'] ?>course/index/relaxation" id="relaxation">Relaxation</a>
 
+
     </div>
 
     <main>
 
+        <h1 id="no-course">There are no courses in <?= $data['category'] ?> ... Sorry</h1>
+        <h2 id="no-course">You could <a href="<?= $data['syntax'] ?>proposal">propose</a> one you find interesting sometime...</h2>
 
     </main>
-
 
     <div class="contact">
         <p>If you wish to contact us you can do so using our

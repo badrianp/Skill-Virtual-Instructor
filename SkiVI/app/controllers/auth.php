@@ -44,6 +44,7 @@ class Auth extends Controller
 
         if (!$user) {
             echo "Invalid credentials ...";
+            header("Location: ../auth/wrong");
             // $this->view('errors/wrong-credentials', $data);
         } else {
             login($user);
@@ -85,10 +86,29 @@ class Auth extends Controller
         //     return;
         // } 
         if ($exists != '') {
-            header("Location: ../auth" . $exists);
+            header("Location: ../auth/wrong" . $exists);
         } else {
             register__user($user);
             header("Location: ../");
+        }
+    }
+
+    public function wrong($data)
+    {
+        $to__root = $data[0];
+        unset($data[0]);
+
+        if (!isset($data[1])) {
+            // print_r($data);
+            $this->view('errors/invalid__credentials', ['syntax' => $to__root]);
+        } else {
+            // print_r($data);
+            $param1 = $data[1];
+            if (isset($data[2])) {
+                $param2 = $data[2];
+                $this->view('errors/exists', ['syntax' => $to__root, 'param1' => $param1, 'param2' => $param2]);
+            }
+            $this->view('errors/exists', ['syntax' => $to__root, 'param1' => $param1]);
         }
     }
 }

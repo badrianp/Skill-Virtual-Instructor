@@ -13,7 +13,7 @@ class App
     {
         $url = $this->parseUrl();
 
-        $to__root[] = $this->get__root();
+        $to__root = $this->get__root();
 
         if (isset($url[0]) && file_exists('../app/controllers/' .  $url[0] . '.php')) {
             $this->controller = $url[0];
@@ -29,15 +29,24 @@ class App
             unset($url[1]);
         }
 
-        $this->params = $url ? array_values($url) : [];
+        $this->params[0] = $to__root;
 
-        call_user_func_array([$this->controller, $this->method], [$to__root, $this->params]);
+        if ($url != null) {
+            foreach ($url as $param) {
+                # code...
+                $this->params[] = $param;
+            }
+        }
+
+        call_user_func_array([$this->controller, $this->method],  [$this->params]);
     }
 
     public function get__root()
     {
         $to__root = '';
         $url = $this->parseUrl();
+
+        // echo ($url[2]);
 
         if (isset($_GET['url'])) {
 

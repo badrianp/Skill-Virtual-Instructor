@@ -1,17 +1,16 @@
-function getCourses(category, root) {
+function getCourses(count, root) {
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function (e) {
       if (this.readyState == 4 && this.status == 200) {
-         if (this.responseText != null)
-            generateDOM(this.responseText, root, category);
+         if (this.responseText != null) generateDOM(this.responseText, root);
          else alert(this.responseText);
       }
    };
-   xhttp.open("GET", root + "course/category/" + category, true);
+   xhttp.open("GET", root + "home/get__start/" + count, true);
    xhttp.send();
 }
 
-function generateDOM(JSONResponse, root = "", category) {
+function generateDOM(JSONResponse, root = "") {
    var contentdiv = document.createElement("div");
    contentdiv.id = "content-div";
    contentdiv.className = "content-div";
@@ -20,6 +19,8 @@ function generateDOM(JSONResponse, root = "", category) {
    courseDetails = JSON.parse(JSONResponse);
 
    var i = 0;
+   var gallery = document.createElement("div");
+   gallery.classList.add("gallery");
 
    while (i < courseDetails.length) {
       var courseId = document.createElement("data");
@@ -36,7 +37,7 @@ function generateDOM(JSONResponse, root = "", category) {
       courseTitle.innerText = courseDetails[i]["title"];
 
       var href = document.createElement("a");
-      href.href = root + "course/example/" + courseId.value; //link ul catre pagina in care se afla cursul, aici cred ca trebuie dinamic si el gen /courses?id=id_curs sau asa ceva nu?
+      href.href = root + "course/example/" + courseId.value;
 
       var courseImage = document.createElement("img");
       courseImage.id = "course-image";
@@ -56,11 +57,14 @@ function generateDOM(JSONResponse, root = "", category) {
       courseDiv.appendChild(courseAuthor);
       courseDiv.appendChild(courseId);
 
-      document.getElementById("content-div").appendChild(courseDiv);
+      gallery.appendChild(courseDiv);
       i++;
    }
 
-   if (i == 0) {
-      document.location.href = root + "course/no__category/" + category;
+   var bro = document.getElementById("lastP");
+   bro.after(gallery);
+
+   if (i != 3) {
+      document.location.href = root + "course/home/";
    }
 }

@@ -1,128 +1,138 @@
 header {
-    font-size: 0.8em;
-    border-bottom: 2px solid rgb(111, 97, 236);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+   font-size: 0.8em;
+   border-bottom: 2px solid rgb(111, 97, 236);
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
 }
 
 body {
-    font-family: fantasy;
-    font-size: 100%;
-    background-color: whitesmoke;
-    height: 85vh;
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: column nowrap;
+   font-family: fantasy;
+   font-size: 100%;
+   background-color: whitesmoke;
+   height: 85vh;
+   display: flex;
+   justify-content: space-evenly;
+   flex-flow: column nowrap;
 }
 
 .main-div {
-    padding: 0;
-    height: 80%;
-    width: 100%;
-    min-width: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   padding: 30;
+   height: 80%;
+   width: 100%;
+   min-width: 280px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .credentials-form {
-    background-color: white;
-    height: 50vh;
-    min-height: 340px;
-    width: 50vw;
-    min-width: 280px;
-    max-width: 830px;
-    border: 2px solid rgb(111, 97, 236);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    padding-bottom: 1em;
+   background-color: white;
+   height: 50vh;
+   min-height: 340px;
+   width: 50vw;
+   min-width: 280px;
+   max-width: 830px;
+   border: 2px solid rgb(111, 97, 236);
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column nowrap;
+   padding-bottom: 1em;
+}
+
+#register-form.credentials-form {
+   top: 30%;
+   height: 70vh;
 }
 
 .home-icon {
-    text-decoration: none;
-    font-style: unset;
-    color: cadetblue;
-    font-family: fantasy;
-    font-size: 2em;
+   text-decoration: none;
+   font-style: unset;
+   color: cadetblue;
+   font-family: fantasy;
+   font-size: 2em;
 }
 
 .input-div {
-    min-width: 160px;
-    width: 50%;
-    padding: 10px;
+   min-width: 160px;
+   width: 50%;
+   padding: 10px;
 }
 
 .input-label {
-    padding: 4px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-flow: column nowrap;
+   padding: 4px;
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   flex-flow: column nowrap;
 }
 
 .input-label span {
-    font-size: 100%;
-    color: cadetblue;
-    padding: 6px;
-    align-self: flex-start;
+   font-size: 100%;
+   color: cadetblue;
+   padding: 6px;
+   align-self: flex-start;
 }
 
 .input-area {
-    padding: 3px;
-    height: 90%;
-    width: 100%;
+   padding: 3px;
+   height: 90%;
+   width: 100%;
 }
 
 .main-div i {
-    margin-top: -20px;
-    align-self: flex-end;
+   margin-top: -20px;
+   align-self: flex-end;
+}
+
+#wrong {
+   color: red;
+   font-size: smaller;
 }
 
 .buttons-div {
-    width: 35%;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-flow: column nowrap;
+   width: 35%;
+   padding: 10px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   flex-flow: column nowrap;
 }
 
 .buttons-div label {
-    margin-top: 1em;
-    width: 100%;
+   margin-top: 1em;
+   width: 100%;
 }
 
 .form-button {
-    padding: 4px;
-    background-color: rgb(59, 177, 78);
-    border: 0.5px solid rgb(111, 97, 236);
-    opacity: 0.7;
-    border-radius: 2.5px;
-    width: 100%;
+   padding: 4px;
+   background-color: rgb(59, 177, 78);
+   border: 0.5px solid rgb(111, 97, 236);
+   opacity: 0.7;
+   border-radius: 2.5px;
+   width: 100%;
 }
 
 .form-button:hover {
-    opacity: 1;
+   opacity: 1;
 }
 
 #request-login,
 #request-register {
-    background-color: rgb(111, 97, 236);
+   background-color: rgb(111, 97, 236);
 }
 
 .buttons-div span {
-    margin-top: 5px;
-    margin-bottom: -5px;
-    opacity: 0.5;
-    font-style: italic;
-    font-size: 0.8em;
+   margin-top: 5px;
+   margin-bottom: -5px;
+   opacity: 0.5;
+   font-style: italic;
+   font-size: 0.8em;
 }
 
 .hide {
-    display: none;
+   display: none;
 }

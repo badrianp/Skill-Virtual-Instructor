@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="<?= $data['syntax'] ?>css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="<?= $data['syntax'] ?>js/navbar.js" async></script>
+    <script src="<?= $data['syntax'] ?>js/dynamic.courses.js" async></script>
     <script src="<?= $data['syntax'] ?>js/lesson.js" async></script>
 </head>
 
-<body>
+<body onload="getCourseInfo(`<?= $data['id'] ?>`,`<?= $data['syntax'] ?>`)">
     <header>
     </header>
 
@@ -21,7 +22,7 @@
         Learn easily for your own good
     </div>
 
-    <main>
+    <main onload="get">
         <div class="navbar" id="navMenu">
             <a href="<?= $data['syntax'] ?>home">Home</a>
             <a href="<?= $data['syntax'] ?>course" class="current">Courses</a>
@@ -32,41 +33,6 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <section class="learning">
-            <h1>Learn how to make a paper crane - Origami lesson</h1>
-            <div class="splash-art">
-                <img src="<?= $data['syntax'] ?>Images/origami.jpg" alt="Origami.jpg">
-            </div>
-            <div class="course-description">
-                A simple and easy to follow lesson that will teach you how to create a paper crane using origami, the art of paper folding, which is often associated with Japanese culture.
-            </div>
-            <div class="course-details">
-                <i class="fa fa-clock"><span>30 Min.</span></i>
-                <br>
-                <i class="fa fa-brain"><span>Begginer</span></i>
-                <br>
-                <i class="fa fa-puzzle-piece"><span>2 Parts</span></i>
-                <br>
-                <i class="fa fa-paint-brush"><span>No prior experience needed</span></i>
-            </div>
-            <h1>Lesson parts:</h1>
-            <div class="course-parts">
-                <div class="part">
-                    <img class="lesson--image" id="lesson_image_1" src="<?= $data['syntax'] ?>Images/origami.jpg" alt="Origami.jpg">
-                    <div id="lesson_1" class="modal--part">
-                        <span class="close--button">&times;</span>
-                        <h1>Aici vor fi poze/informatii/video-uri pentru lectia 1</h1>
-                    </div>
-                </div>
-                <div class="part">
-                    <img class="lesson--image" id="lesson_image_2" src="<?= $data['syntax'] ?>Images/Origami2.jpg" alt="Origami2.jpg">
-                    <div id="lesson_2" class="modal--part">
-                        <span class="close--button">&times;</span>
-                        <h1>Aici vor fi poze/informatii/video-uri pentru lectia 2</h1>
-                    </div>
-                </div>
-            </div>
-        </section>
         <div class="contact">
             <p>If you wish to contact us you can do so using our
                 <br>Email Adress: email_adress@site.domain
