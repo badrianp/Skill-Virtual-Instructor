@@ -15,14 +15,14 @@ class Feedback extends Controller
             $this->view('errors/first__login', ['syntax' => $to__root, 'params' => $data]);
     }
 
-    function send_mail(){
-        header('Location: index__home.php');
+    function send_mail()
+    {
         if(isset($_POST['submit']))
         {
             $to = "skivibagrd@gmail.com";
             $from = "gheorghitard@gmail.com"; // inlocuit cu adresa email a utilizatorului logat
             $name = "Bob"; // inlocuit cu numele utilizatorului
-            $subject = "Feedback form " . $name;
+            $subject = "Feedback from " . $name;
             if(isset($_POST["appearance"]))
             {
                 $appearance = "Q: How do you feel about the general appearance of the website? \nA: " . $_POST["appearance"] . "\n";

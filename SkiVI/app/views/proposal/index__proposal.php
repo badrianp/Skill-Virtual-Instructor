@@ -36,26 +36,26 @@
             <p>In order to make the process of adding your courses and lessons easier, please attach a PDF, MP4 or any other type of file that could help us decide if your proposal is worth adding to our application</p>
         </section>
         <div class="proposal">
-            <form>
-                <label for="author-name"> * Tell us your name</label><br>
-                <input type="text" id="author-name" name="author-name" placeholder="Your name"><br>
-                <label for="author-email"> * Please add an email with which we could contact you</label><br>
-                <input type="email" id="author-email" name="author-name" placeholder="email@domain">
+            <form method="POST" action="proposal/send_proposal_mail" enctype="multipart/form-data">
+                <label for="author_name"> * Tell us your name</label><br>
+                <input type="text" id="author_name" name="author_name" placeholder="Your name" required><br>
+                <label for="author_email"> * Please add an email with which we could contact you</label><br>
+                <input type="email" id="author_email" name="author_email" placeholder="email@domain" required>
                 <p> * Choose if you wish to propose a full course or a single lesson</p>
                 <br>
-                <input type="radio" id="course" name="type" value="Course"><label for="course">Course</label><br>
+                <input type="radio" id="course" name="type" value="Course" required><label for="course">Course</label><br>
                 <input type="radio" id="lesson" name="type" value="Lesson"><label for="lesson">Lesson</label><br><br>
-                <label for="proposal-name"> * Tell us the name of your proposal</label><br>
-                <input type="text" id="proposal-name" name="proposal-name" placeholder="Proposal name"><br>
+                <label for="proposal_name"> * Tell us the name of your proposal</label><br>
+                <input type="text" id="proposal_name" name="proposal_name" placeholder="Proposal name" required><br>
                 <label for="labels"> * Add some labels for your proposal</label><br>
-                <input type="text" id="labels" name="labels" placeholder="Educational, DIY, ..."><br>
-                <label for="splash-art"> * Choose the splash-art picture for your proposal</label><br>
-                <input type="file" id="splash-art" name="splash-art" accept="image/png, image/jpeg"><br>
+                <input type="text" id="labels" name="labels" placeholder="Educational, DIY, ..." required><br>
+                <label for="splash_art"> * Choose the splash_art picture for your proposal</label><br>
+                <input type="file" id="splash_art" name="splash_art" accept="image/png, image/jpeg" required><br>
                 <label for="annex"> Add something to help us decide if your proposal is worthy to be added to our application</label>
-                <input type="file" id="annex" name="annex"><br>
+                <input type="file" id="annex" name="annex" required><br>
                 <label for="description"> * Add a short description about your proposal</label><br><br>
-                <textarea id="description" name="description" rows="5" cols="50" placeholder="Add description..."></textarea>
-                <button type="submit">Submit proposal</button>
+                <textarea id="description" name="description" rows="5" cols="50" placeholder="Add description..." required></textarea>
+                <button type="submit" name="submit">Submit proposal</button>
             </form>
         </div>
         <div class="contact">
@@ -65,7 +65,7 @@
             </p>
         </div>
         <div class="copyright">
-            <p>Copyright: All rights reserved for Gheorghita Razvan-Daniel, Bleoju Adrian</p>
+            <p>Copyright: All rights reserved for Gheorghita Razvan_Daniel, Bleoju Adrian</p>
         </div>
     </main>
 
