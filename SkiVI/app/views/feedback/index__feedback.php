@@ -39,7 +39,7 @@
             <p>In order to make the process of adding your courses and lessons easier, please attach a PDF, MP4 or any other type of file that could help us decide if your proposal is worth adding to our application</p>
         </section>
         <div class="feedback">
-            <form>
+            <form method="POST" action="feedback/send_mail">
                 <p> How do you feel about the general appearance of the website?</p>
                 <input type="radio" id="a_dislike" name="appearance" value="dislike"><label for="a_dislike">Dislike</label><br>
                 <input type="radio" id="a_partdislike" name="appearance" value="partdislike"><label for="a_partdislike">Partially dislike</label><br>
@@ -67,7 +67,7 @@
                 <textarea id="user_improvements" name="user_improvements" rows="5" cols="50" placeholder="I think..."></textarea><br>
                 <label for="user_personal"> Anything else you would like to share with us?</label><br><br>
                 <textarea id="user_personal" name="user_personal" rows="5" cols="50" placeholder="Hello..."></textarea>
-                <button type="submit">Submit feedback</button>
+                <button type="submit" name="submit">Submit feedback</button>
             </form>
         </div>
         <div class="contact">

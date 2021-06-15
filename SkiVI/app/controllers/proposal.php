@@ -12,6 +12,6 @@ class Proposal extends Controller
         if (get__logged__user() != null)
             $this->view('proposal/index__proposal', ['syntax' => $to__root, 'params' => $data]);
         else
-            $this->view('errors\first__login', ['syntax' => $to__root, 'params' => $data]);
+            $this->view('errors/first__login', ['syntax' => $to__root, 'params' => $data]);
     }
 }
