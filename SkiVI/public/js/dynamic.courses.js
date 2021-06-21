@@ -1,140 +1,162 @@
 function getCourseInfo(id, root) {
-   var courseId = id;
-   var xhttp = new XMLHttpRequest();
-   xhttp.onreadystatechange = function (e) {
-      if (this.readyState == 4 && this.status == 200) {
-         if (this.responseText != null) {
-            generateDOMInfo(this.responseText, root);
-         } else {
-            alert(this.responseText);
-         }
-      }
-   };
-   xhttp.open("GET", root + "course/course__id/" + courseId, true);
-   xhttp.send();
+    var courseId = id;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(e) {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText != null) {
+                generateDOMInfo(this.responseText, root);
+            } else {
+                alert(this.responseText);
+            }
+        }
+    };
+    xhttp.open("GET", root + "course/course__id/" + courseId, true);
+    xhttp.send();
 }
 
 function generateDOMInfo(JSONResponse, root) {
-   // document.getElementById("learning").remove();
+    // document.getElementById("learning").remove();
 
-   courseDetails = JSON.parse(JSONResponse);
-   if (courseDetails.length != 0) {
-      var contentSection = document.createElement("section");
-      contentSection.id = "learning";
-      contentSection.className = "learning";
+    courseDetails = JSON.parse(JSONResponse);
+    if (courseDetails.length != 0) {
+        var contentSection = document.createElement("section");
+        contentSection.id = "learning";
+        contentSection.className = "learning";
 
-      //    document.body.appendChild(contentSection);
+        //    document.body.appendChild(contentSection);
 
-      var courseTitle = document.createElement("h1");
-      courseTitle.id = "course-title";
-      courseTitle.class = "course-title";
-      courseTitle.innerText = courseDetails["title"];
+        var courseTitle = document.createElement("h1");
+        courseTitle.id = "course-title";
+        courseTitle.class = "course-title";
+        courseTitle.innerText = courseDetails["title"];
 
-      var splashArt = document.createElement("div");
-      //   splashArt.id = "splash-art";
-      splashArt.classList.add("splash-art");
+        var splashArt = document.createElement("div");
+        //   splashArt.id = "splash-art";
+        splashArt.classList.add("splash-art");
 
-      var courseImage = document.createElement("img");
-      //   courseImage.id = "course-image";
-      //   courseImage.className = "course-image";
-      courseImage.alt = courseDetails["image"];
-      courseImage.src = root + "Images/" + courseDetails["image"];
+        var courseImage = document.createElement("img");
+        //   courseImage.id = "course-image";
+        //   courseImage.className = "course-image";
+        courseImage.alt = courseDetails["image"];
+        courseImage.src = root + "Images/" + courseDetails["image"];
 
-      var courseDescription = document.createElement("div");
-      //   courseDescription.id = "course-author";
-      courseDescription.className = "course-description";
-      courseDescription.innerText = courseDetails["description"];
+        var courseDescription = document.createElement("div");
+        //   courseDescription.id = "course-author";
+        courseDescription.className = "course-description";
+        courseDescription.innerText = courseDetails["description"];
 
-      var courseStats = document.createElement("div");
-      //   courseStats.id = "course-details";
-      courseStats.class = "course-details";
+        var courseStats = document.createElement("div");
+        //   courseStats.id = "course-details";
+        courseStats.className = "course-details";
 
-      var courseTime = document.createElement("i");
-      //   courseTime.id = "course-time";
-      courseTime.class = "fa fa-clock";
+        var courseTime = document.createElement("i");
+        //   courseTime.id = "course-time";
+        courseTime.className = "fa fa-clock";
 
-      var courseTimeSpan = document.createElement("span");
-      courseTimeSpan.innerText = courseDetails["duration"] + " Min.";
+        var courseTimeSpan = document.createElement("span");
+        courseTimeSpan.innerText = courseDetails["duration"] + " Min.";
 
-      var courseDif = document.createElement("i");
-      //   courseDif.id = "course-dif";
-      courseDif.class = "fa fa-brain";
+        var courseDif = document.createElement("i");
+        //   courseDif.id = "course-dif";
+        courseDif.className = "fa fa-brain";
 
-      var courseDifSpan = document.createElement("span");
-      courseDifSpan.innerText = courseDetails["difficulty"];
+        var courseDifSpan = document.createElement("span");
+        courseDifSpan.innerText = courseDetails["difficulty"];
 
-      var courseParts = document.createElement("i");
-      //   courseParts.id = "course-parts";
-      courseParts.class = "fa fa-puzzle-piece";
-      var coursePartsSpan = document.createElement("span");
-      coursePartsSpan.innerText = courseDetails["parts"] + " Part(s)";
+        var courseParts = document.createElement("i");
+        //   courseParts.id = "course-parts";
+        courseParts.className = "fa fa-puzzle-piece";
+        var coursePartsSpan = document.createElement("span");
+        coursePartsSpan.innerText = courseDetails["parts"] + " Part(s)";
 
-      var courseExperience = document.createElement("i");
-      //   courseExperience.id = "course-experience";
-      courseExperience.class = "fa fa-puzzle-piece";
-      var courseExperienceSpan = document.createElement("span");
-      courseExperienceSpan.innerText = courseDetails["experience"];
+        var courseExperience = document.createElement("i");
+        //   courseExperience.id = "course-experience";
+        courseExperience.className = "fa fa-paint-brush";
+        var courseExperienceSpan = document.createElement("span");
+        courseExperienceSpan.innerText = courseDetails["experience"];
+        var parts = document.createElement("h1");
+        parts.innerText = "Lesson parts:";
 
-      var parts = document.createElement("h1");
-      parts.innerText = "Lesson parts:";
+        var lessons = document.createElement("div");
+        lessons.className = "course-parts";
 
-      // Aici ar trebui cred apel la microserviciul ce ofera detaliile la curs
+        contentSection.appendChild(courseTitle);
 
-      var partDiv = [];
-      var partImg = [];
-      var partDivv = [];
-      var partSpan = [];
-      var partH = [];
+        splashArt.appendChild(courseImage);
+        contentSection.appendChild(splashArt);
 
-      for (let i = 1; i <= courseDetails["parts"]; i++) {
-         partDiv[i] = document.createElement("div");
-         partDiv[i].classList.add("part");
-         partImg[i] = document.createElement("img");
-         partImg[i].id = "lesson_image_" + i;
-         partImg[i].classList.add("lesson--image");
-         partImg[i].src =
-            root +
-            "Images/" +
-            courseDetails["image"].split(".", 1) +
-            i +
-            ".jpg";
-         partImg[i].alt = courseDetails["title"] + i;
-         partDivv[i] = document.createElement("div");
-         partDivv[i].id = "lesson_" + i;
-         partDivv[i].classList.add("modal--part");
-         partSpan[i] = document.createElement("span");
-         partSpan[i].classList.add("close--button");
-         partSpan[i].innerText = "&times;";
-         partH[i] = document.createElement("h1");
-         partH[i].innerText =
-            "Aici vor fi poze/informatii/video-uri pentru lectia " + i;
-      }
+        contentSection.appendChild(courseDescription);
 
-      contentSection.appendChild(courseTitle);
+        courseTime.appendChild(courseTimeSpan);
+        courseDif.appendChild(courseDifSpan);
+        courseParts.appendChild(coursePartsSpan);
+        courseExperience.appendChild(courseExperienceSpan);
 
-      splashArt.appendChild(courseImage);
-      contentSection.appendChild(splashArt);
+        courseStats.appendChild(courseTime);
+        courseStats.appendChild(document.createElement("br"));
+        courseStats.appendChild(courseDif);
+        courseStats.appendChild(document.createElement("br"));
+        courseStats.appendChild(courseParts);
+        courseStats.appendChild(document.createElement("br"));
+        courseStats.appendChild(courseExperience);
+        courseStats.appendChild(document.createElement("br"));
 
-      contentSection.appendChild(courseDescription);
+        contentSection.appendChild(courseStats);
 
-      courseTime.appendChild(courseTimeSpan);
-      courseDif.appendChild(courseDifSpan);
-      courseParts.appendChild(coursePartsSpan);
-      courseExperience.appendChild(courseExperienceSpan);
+        contentSection.appendChild(parts);
 
-      courseStats.appendChild(courseTime);
-      courseStats.appendChild(courseDif);
-      courseStats.appendChild(courseParts);
-      courseStats.appendChild(courseExperience);
+        document.getElementById("navMenu").after(contentSection);
 
-      contentSection.appendChild(courseStats);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(e) {
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.responseText != null) {
+                    var jsonarr = JSON.parse(this.responseText);
+                    var test = document.createElement("p");
+                    test.innerHTML = this.responseText;
+                    contentSection.appendChild(test);
+                    var partDiv = [];
+                    var partImg = [];
+                    var partDivv = [];
+                    var partSpan = [];
+                    var partH = [];
 
-      contentSection.appendChild(parts);
+                    for (let i = 0; i < jsonarr.lessons.length; i++) {
+                        partDiv[i] = document.createElement("div");
+                        partDiv[i].classList.add("part");
+                        partImg[i] = document.createElement("img");
+                        partImg[i].id = "lesson_image_" + i;
+                        partImg[i].classList.add("lesson--image");
+                        partImg[i].src =
+                            root +
+                            "Images/" +
+                            jsonarr.lessons[i].image +
+                            ".jpg";
+                        partImg[i].alt = courseDetails["title"] + i;
+                        partDivv[i] = document.createElement("div");
+                        partDivv[i].id = "lesson_" + i;
+                        partDivv[i].classList.add("modal--part");
+                        partSpan[i] = document.createElement("span");
+                        partSpan[i].classList.add("close--button");
+                        partSpan[i].innerText = "&times;";
+                        partH[i] = document.createElement("h1");
+                        partH[i].innerText =
+                            "Aici vor fi poze/informatii/video-uri pentru lectia " + i;
 
-      document.getElementById("navMenu").after(contentSection);
-   } else {
-      document.location.href = root + "course/no__id/";
-   }
+                    }
+                } else {
+                    alert(this.responseText);
+                }
+            }
+        };
+        console.log(root);
+        xhttp.open("GET", "../../../microservices/origamimicroservice/api/product/getCourseLessons.php?id=1", true);
+        xhttp.setRequestHeader("Content-Type", "application/json");
+        xhttp.send();
 
-   //    document.getElementById("learning").appendChild(contentSection);
+    } else {
+        document.location.href = root + "course/no__id/";
+    }
+
+    //    document.getElementById("learning").appendChild(contentSection);
 }
