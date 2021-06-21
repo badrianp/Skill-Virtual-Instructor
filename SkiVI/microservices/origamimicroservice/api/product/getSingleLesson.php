@@ -15,13 +15,11 @@ if($_SERVER['REQUEST_METHOD']=="GET")
     {
         $lesson = new Lesson($db);
 
-        $stmt = $lesson->readCourse($_GET["id"]);
+        $stmt = $lesson->readLesson($_GET["id"]);
         $result = $stmt->get_result();
         $num = $result->num_rows;   
         if($num > 0)
         {
-            $lessons = array();
-            $lessons["lessons"] = array();
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
             {
                 extract($row);
@@ -44,20 +42,20 @@ if($_SERVER['REQUEST_METHOD']=="GET")
                 }
                 $single_lesson = array(
                     "id" => $id,
+                    "course_id" => $course_id,
                     "name" => $name,
                     "image" => $image,
                     "lesson_steps" => $steps
                 );
-                array_push($lessons["lessons"], $single_lesson);
             }
             http_response_code(200);
-            echo json_encode($lessons);
+            echo json_encode($single_lesson);
         }
         else
         {
             http_response_code(404);
             echo json_encode(
-                array("message" => "No lessons found for given course id")
+                array("message" => "No lessons found for given lesson id")
             );
         }
     }
@@ -65,7 +63,7 @@ if($_SERVER['REQUEST_METHOD']=="GET")
     {
         http_response_code(404);
         echo json_encode(
-            array("message" => "Please add the id of the course whose lessons details you wish to receive in the request")
+            array("message" => "Please add the id of the lesson whose details you wish to receive in the request")
         );
     }
     

@@ -1,7 +1,8 @@
 <?php
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: access");
 header("Access-Control-Allow-Methods: GET");
-header("Content-Type: application/json; charser=UTF-8");
+header("Content-Type: application/json");
 
 include_once '../config/database.php';
 include_once '../objects/lesson.php';
@@ -37,27 +38,27 @@ if($_SERVER['REQUEST_METHOD']=="GET")
             else
             {
                 $steps = array(
-                "error" => "There was a problem receiving lesson's steps, please try again later, if this problem persists, please contact us as soon as possible"
+                    "error" => "There was a problem receiving lesson's steps, please try again later, if this problem persists, please contact us as soon as possible"
                 );
+            }
+            $single_lesson = array(
+                "id" => $id,
+                "name" => $name,
+                "image" => $image,
+                "lesson_steps" => $steps
+            );
+            array_push($lessons["lessons"], $single_lesson);
         }
-        $single_lesson = array(
-            "id" => $id,
-            "name" => $name,
-            "image" => $image,
-            "lesson_steps" => $steps
-        );
-        array_push($lessons["lessons"], $single_lesson);
+        http_response_code(200);
+        echo json_encode($lessons);
     }
-    http_response_code(200);
-    echo json_encode($lessons);
-}
     else
-{
-    http_response_code(200);
-    echo json_encode(
-        array("message" => "No lessons found")
-    );
-}
+    {
+        http_response_code(404);
+        echo json_encode(
+            array("message" => "No lessons found")
+        );
+    }
 }
 else
 {
