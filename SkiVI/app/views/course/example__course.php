@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="<?= $data['syntax'] ?>js/navbar.js" async></script>
     <script src="<?= $data['syntax'] ?>js/dynamic.courses.js" async></script>
-    <script src="<?= $data['syntax'] ?>js/lesson.js" async></script>
+    <!-- <script src="<?= $data['syntax'] ?>js/lesson.js" async></script> -->
 </head>
 
 <body onload="getCourseInfo(`<?= $data['id'] ?>`,`<?= $data['syntax'] ?>`)">

@@ -19,6 +19,7 @@ function generateDOMInfo(JSONResponse, root) {
 
     courseDetails = JSON.parse(JSONResponse);
     if (courseDetails.length != 0) {
+
         var contentSection = document.createElement("section");
         contentSection.id = "learning";
         contentSection.className = "learning";
@@ -29,7 +30,6 @@ function generateDOMInfo(JSONResponse, root) {
         courseTitle.id = "course-title";
         courseTitle.class = "course-title";
         courseTitle.innerText = courseDetails["title"];
-
         var splashArt = document.createElement("div");
         //   splashArt.id = "splash-art";
         splashArt.classList.add("splash-art");
@@ -106,15 +106,12 @@ function generateDOMInfo(JSONResponse, root) {
         contentSection.appendChild(parts);
 
         document.getElementById("navMenu").after(contentSection);
-
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function(e) {
             if (this.readyState == 4 && this.status == 200) {
                 if (this.responseText != null) {
                     var jsonarr = JSON.parse(this.responseText);
-                    var test = document.createElement("p");
-                    test.innerHTML = this.responseText;
-                    contentSection.appendChild(test);
+
                     var partDiv = [];
                     var partImg = [];
                     var partDivv = [];
@@ -127,30 +124,46 @@ function generateDOMInfo(JSONResponse, root) {
                         partImg[i] = document.createElement("img");
                         partImg[i].id = "lesson_image_" + i;
                         partImg[i].classList.add("lesson--image");
-                        partImg[i].src =
-                            root +
-                            "Images/" +
-                            jsonarr.lessons[i].image +
-                            ".jpg";
-                        partImg[i].alt = courseDetails["title"] + i;
+                        partImg[i].src = root + "Images/" + jsonarr.lessons[i].image + ".jpg";
+                        partImg[i].alt = jsonarr.lessons[i].name;
+                        partImg[i].onclick = function() { showModal("lesson_" + i) };
                         partDivv[i] = document.createElement("div");
                         partDivv[i].id = "lesson_" + i;
                         partDivv[i].classList.add("modal--part");
                         partSpan[i] = document.createElement("span");
+                        partSpan[i].id = "close_" + i;
                         partSpan[i].classList.add("close--button");
-                        partSpan[i].innerText = "&times;";
+                        partSpan[i].innerText = "x";
+                        partSpan[i].onclick = function() { hideModal("lesson_" + i) };
                         partH[i] = document.createElement("h1");
-                        partH[i].innerText =
-                            "Aici vor fi poze/informatii/video-uri pentru lectia " + i;
-
+                        partH[i].innerText = jsonarr.lessons[i].name;
+                        partDivv[i].appendChild(partSpan[i]);
+                        partDivv[i].appendChild(partH[i]);
+                        for (var key in jsonarr.lessons[i].lesson_steps) {
+                            if (key.substr(0, 3) == "img") {
+                                var part = document.createElement("img");
+                                part.classList.add("learning--image");
+                                part.src = root + "Images/" + jsonarr.lessons[i].lesson_steps[key] + ".jpg";
+                                partDivv[i].appendChild(part);
+                            } else {
+                                var part = document.createElement("p");
+                                part.classList.add("learning--p");
+                                part.innerText = jsonarr.lessons[i].lesson_steps[key];
+                                partDivv[i].appendChild(part);
+                            }
+                        }
+                        partDiv[i].appendChild(partImg[i]);
+                        partDiv[i].appendChild(partDivv[i]);
+                        lessons.appendChild(partDiv[i]);
                     }
+                    contentSection.appendChild(lessons);
                 } else {
                     alert(this.responseText);
                 }
             }
         };
-        console.log(root);
-        xhttp.open("GET", "../../../microservices/origamimicroservice/api/product/getCourseLessons.php?id=1", true);
+        var ajax = "../../../microservices/origamimicroservice/api/product/getCourseLessons.php?id=" + courseDetails["ID"];
+        xhttp.open("GET", ajax, true);
         xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.send();
 
@@ -159,4 +172,14 @@ function generateDOMInfo(JSONResponse, root) {
     }
 
     //    document.getElementById("learning").appendChild(contentSection);
+}
+
+function showModal($id) {
+    var modal = document.getElementById($id);
+    modal.style.display = "block";
+}
+
+function hideModal($id) {
+    var modal = document.getElementById($id);
+    modal.style.display = "none";
 }
