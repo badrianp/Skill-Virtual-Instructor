@@ -512,3 +512,21 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+.learning .course-parts .part .modal--part h1 {
+    text-align: center;
+}
+
+.learning .course-parts .part .modal--part p {
+    size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.learning .course-parts .part .modal--part img {
+    width: 80vw;
+    height: 50vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}

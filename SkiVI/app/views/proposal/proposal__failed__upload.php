@@ -34,7 +34,7 @@
             </a>
         </div>
         <section class="informations">
-            <h1>There was a problem while trying to submit your proposal. Please try again later.</h1>
+            <h1>There was a problem while trying to upload your attachments in your proposal. Please try again later.</h1>
             <p>If this problem persists, please contact us directily via email.</p>
         </section>
         <div class="contact">

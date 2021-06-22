@@ -134,6 +134,8 @@ function generateDOMInfo(JSONResponse, root) {
                         partSpan[i].id = "close_" + i;
                         partSpan[i].classList.add("close--button");
                         partSpan[i].innerText = "x";
+                        partSpan[i].style.position = "fixed";
+                        partSpan[i].style.zIndex = 2;
                         partSpan[i].onclick = function() { hideModal("lesson_" + i) };
                         partH[i] = document.createElement("h1");
                         partH[i].innerText = jsonarr.lessons[i].name;
@@ -162,7 +164,7 @@ function generateDOMInfo(JSONResponse, root) {
                 }
             }
         };
-        var ajax = "../../../microservices/origamimicroservice/api/product/getCourseLessons.php?id=" + courseDetails["ID"];
+        var ajax = "../../../microservices/" + courseDetails["category"] + "microservice/api/product/getCourseLessons.php?id=" + courseDetails["ID"];
         xhttp.open("GET", ajax, true);
         xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.send();

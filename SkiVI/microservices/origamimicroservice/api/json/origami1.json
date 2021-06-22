@@ -1,4 +1,10 @@
 {
-    "step1": "Ceva de scris pe aici",
-    "img1": "crane1"
+    "step1": "1) Prepare a sheet of any rectangular paper(A4, Letter, etc)",
+    "img1": "paper1",
+    "step2": "2) Fold down one top corner to meet the opposite edge, forming a triangle",
+    "img2": "paper2",
+    "step3": "3) Cut the excess paper below the triangle",
+    "img3": "paper3",
+    "step4": "4) Unfold the paper to reveal a perfect square paper, just ready to be used in all your origami crafts",
+    "img4": "paper4"
 }

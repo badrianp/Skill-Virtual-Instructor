@@ -32,7 +32,10 @@ class Course extends Controller
         $id = $data[1];
         unset($data[0]);
 
-        $this->view('course/example__course', ['syntax' => $to__root, 'id' => $id]);
+        if (get__logged__user() != null)
+            $this->view('course/example__course', ['syntax' => $to__root, 'id' => $id]);
+        else
+            $this->view('errors/first__login', ['syntax' => $to__root, 'params' => $data]);
     }
 
     public function course__id($data)

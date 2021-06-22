@@ -32,25 +32,21 @@
     </div>
 
     <div class="search-bar">
-        <input type="text" name="search" placeholder="Search...">
-        <button type="submit"><i class="fa fa-search"></i></button>
-        <button><a href="<?= $data['syntax'] ?>course/index/instruments" id="instruments">Instruments</a></button>
-        <button><a href="<?= $data['syntax'] ?>course/index/lifesaving" id="lifesaving">Lifesaving</a></button>
-        <button><a href="<?= $data['syntax'] ?>course/index/educational" id="educational">Educational</a></button>
-        <button><a href="<?= $data['syntax'] ?>course/index/relaxation" id="relaxation">Relaxation</a></button>
-        <button><a href="<?= $data['syntax'] ?>course/index/diy" id="diy">D I Y</a></button>
+        <!-- <input type="text" name="search" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button> -->
+        <button><a href="<?= $data['syntax'] ?>course/index/origami" id="origami">Origami</a></button>
+        <button><a href="<?= $data['syntax'] ?>course/index/cpr" id="cpr">CPR</a></button>
+        <button><a href="<?= $data['syntax'] ?>course/index/harpiscord" id="harpiscord">Harpiscord</a></button>
+        <button><a href="<?= $data['syntax'] ?>course/index/survival" id="survival">Survival</a></button>
     </div>
 
     <div class="side-div">
-        <input class="search-courses" placeholder="search category.." type="search" name="search-courses" id="search-courses">
-        <hr class="line-separator">
-
-        <a class="category-button" href="<?= $data['syntax'] ?>course/index/diy" id="diy"> D I Y </a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/index/instruments" id="instruments">Instruments</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/index/lifesaving" id="lifesaving">Lifesaving</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/index/educational" id="educational">Educational</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/index/relaxation" id="relaxation">Relaxation</a>
-
+        <!-- <input class="search-courses" placeholder="search category.." type="search" name="search-courses" id="search-courses">
+        <hr class="line-separator"> -->
+        <a class="category-button" href="<?= $data['syntax'] ?>course/index/origami" id="origami"> Origami </a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/index/cpr" id="cpr">CPR</a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/index/harpiscord" id="harpiscord">Harpiscord</a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/index/survival" id="survival">Survival</a>
 
     </div>
 

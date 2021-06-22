@@ -33,22 +33,19 @@
     <div class="search-bar">
         <input type="text" name="search" placeholder="Search...">
         <button type="submit"><i class="fa fa-search"></i></button>
-        <button id="DIY">DIY</button>
-        <button id="Educational">Educational</button>
-        <button id="Music">Music</button>
-        <button id="Medical">Medical</button>
-        <button id="Relaxation">Relaxation</button>
+        <button id="origami">Origami</button>
+        <button id="cpr">CPR</button>
+        <button id="harpiscord">Harpiscord</button>
+        <button id="survival">Survival</button>
     </div>
 
     <div class="side-div">
-        <input class="search-courses" placeholder="search category.." type="search" name="search-courses" id="search-courses">
-        <hr class="line-separator">
-
-        <a class="category-button" href="<?= $data['syntax'] ?>course/category/diy" id="diy"> D I Y </a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/category/instruments" id="instruments">Instruments</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/category/lifesaving" id="lifesaving">Lifesaving</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/category/educational" id="educational">Educational</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/category/relaxation" id="relaxation">Relaxation</a>
+        <!-- <input class="search-courses" placeholder="search category.." type="search" name="search-courses" id="search-courses">
+        <hr class="line-separator"> -->
+        <a class="category-button" href="<?= $data['syntax'] ?>course/category/origami" id="origami"> Origami </a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/category/cpr" id="cpr">CPR</a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/category/harpiscord" id="harpiscord">Harpiscord</a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/category/survival" id="survival">Survival</a>
 
     </div>
 

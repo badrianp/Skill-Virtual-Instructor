@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
         http_response_code(400);
         echo json_encode(
             array(
-                "message" => "Data is incorrect, please complete all the necessary information",
+                "message" => "Data is incorrect, please complete all the necessary information:",
                 "id" => "Lesson's id",
                 "course_id" => "The course's id in which the lesson appears",
                 "name" => "Lesson's name",

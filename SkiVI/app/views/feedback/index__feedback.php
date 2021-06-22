@@ -35,8 +35,8 @@
         </div>
         <section class="informations">
             <h1>Hello there!</h1>
-            <p>In this page you can propose a course to be added in our application by completing the following form.</p>
-            <p>In order to make the process of adding your courses and lessons easier, please attach a PDF, MP4 or any other type of file that could help us decide if your proposal is worth adding to our application</p>
+            <p>In this page you can give us feedback for our webpage in order to express how you feel about it. If this doesn't feel like enough you can tell us in the last part of the form or directly via email.</p>
+            <p>The submit of the feedback might take a while, please be patient.</p>
         </section>
         <div class="feedback">
             <form method="POST" action="feedback/send_mail">

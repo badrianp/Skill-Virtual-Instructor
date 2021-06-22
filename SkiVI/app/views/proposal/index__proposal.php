@@ -34,6 +34,7 @@
             <h1>Hello there!</h1>
             <p>In this page you can propose a course to be added in our application by completing the following form.</p>
             <p>In order to make the process of adding your courses and lessons easier, please attach a PDF, MP4 or any other type of file that could help us decide if your proposal is worth adding to our application</p>
+            <p>Uploading your files and processing the proposal might take a while, please be patient upon submission of the proposal.</p>
         </section>
         <div class="proposal">
             <form method="POST" action="proposal/send_proposal_mail" enctype="multipart/form-data">
