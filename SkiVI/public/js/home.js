@@ -11,11 +11,6 @@ function getCourses(count, root) {
 }
 
 function generateDOM(JSONResponse, root = "") {
-   var contentdiv = document.createElement("div");
-   contentdiv.id = "content-div";
-   contentdiv.className = "content-div";
-
-   document.querySelector("main").appendChild(contentdiv);
    courseDetails = JSON.parse(JSONResponse);
 
    var i = 0;

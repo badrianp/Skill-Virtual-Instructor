@@ -1,6 +1,6 @@
 let login_view_password_btn = document.getElementById("login-view-password");
 
-let login_password_input = document.getElementById("login-password");
+let login_password_input = document.getElementById("password");
 
 login_view_password_btn.addEventListener("click", loginViewPassword);
 

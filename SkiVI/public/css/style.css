@@ -1,540 +1,541 @@
 body {
-    position: absolute;
-    margin: 0;
-    background-image: url("../Images/background.png");
+   position: absolute;
+   margin: 0;
+   background-image: url("../Images/background.png");
 }
 
 header {
-    margin: 0;
-    width: 100vw;
-    height: 10px;
-    background-color: rgba(72, 206, 230, 0.932);
-    position: relative;
+   margin: 0;
+   width: 100vw;
+   height: 10px;
+   background-color: rgba(72, 206, 230, 0.932);
+   position: relative;
 }
 
 .logo {
-    width: 100vw;
-    margin: 0;
-    background-color: mediumblue;
-    color: rgb(250, 250, 123);
-    font-family: 'Franklin Gothic Medium';
-    text-align: center;
-    font-size: 2em;
+   width: 100vw;
+   margin: 0;
+   background-color: mediumblue;
+   color: rgb(250, 250, 123);
+   font-family: "Franklin Gothic Medium";
+   text-align: center;
+   font-size: 2em;
 }
 
 .navbar {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    height: 3em;
-    font-family: Verdana;
-    font-size: 1em;
-    background-color: rgb(111, 97, 236);
-    position: sticky;
-    top: 0em;
+   width: 100vw;
+   margin: 0;
+   padding: 0;
+   height: 3em;
+   font-family: Verdana;
+   font-size: 1em;
+   background-color: rgb(111, 97, 236);
+   position: sticky;
+   top: 0em;
 }
 
 .navbar a {
-    margin: 0;
-    padding: 1em 2em;
-    border-width: 0;
-    border-radius: 0;
-    background-color: rgb(111, 97, 236);
-    height: 2em;
-    float: left;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    padding-top: 1em;
-    padding-bottom: 0;
+   margin: 0;
+   padding: 1em 2em;
+   border-width: 0;
+   border-radius: 0;
+   background-color: rgb(111, 97, 236);
+   height: 2em;
+   float: left;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   padding-top: 1em;
+   padding-bottom: 0;
 }
 
 .navbar a:hover {
-    background-color: rgb(25, 0, 255);
-    color: rgb(108, 231, 190);
+   background-color: rgb(25, 0, 255);
+   color: rgb(108, 231, 190);
 }
 
 .navbar .current {
-    background-color: blue;
-    color: rgb(108, 231, 190);
+   background-color: blue;
+   color: rgb(108, 231, 190);
 }
 
 .navbar .button--login {
-    text-align: center;
-    background-color: rgb(111, 97, 236);
-    float: right;
+   text-align: center;
+   background-color: rgb(111, 97, 236);
+   float: right;
 }
 
 .navbar .menu--icon {
-    display: none;
+   display: none;
 }
 
 main {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
+   width: 100vw;
+   margin: 0;
+   padding: 0;
+   display: inline-block;
 }
 
 .informations {
-    margin: 0;
-    padding: 2em 1em;
-    text-align: justify;
-    background-color: rgb(14, 101, 151);
-    font-family: 'Courier New';
-    color: rgb(255, 255, 255);
+   width: 100%;
+   margin: 0;
+   padding: 2em 1em;
+   text-align: justify;
+   background-color: rgb(14, 101, 151);
+   font-family: "Courier New";
+   color: rgb(255, 255, 255);
 }
 
 .courses-gallery {
-    margin: 0;
-    padding: 2em 1em;
-    text-align: justify;
-    background-color: rgb(8, 54, 80);
-    font-family: 'Courier New';
-    color: rgb(255, 255, 255);
+   margin: 0;
+   padding: 2em 1em;
+   text-align: justify;
+   background-color: rgb(8, 54, 80);
+   font-family: "Courier New";
+   color: rgb(255, 255, 255);
 }
 
 .gallery {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: row;
 }
 
 .image {
-    margin: 1em;
-    border-radius: 10px;
-    padding: 1.5em;
-    width: 100%;
-    height: 30vh;
+   margin: 1em;
+   border-radius: 10px;
+   padding: 1.5em;
+   width: 100%;
+   height: 30vh;
 }
 
 .image:hover .description {
-    display: block;
+   display: block;
 }
 
 .image a {
-    width: inherit;
-    height: inherit;
+   width: inherit;
+   height: inherit;
 }
 
 img {
-    border-radius: 10px;
-    width: inherit;
-    height: inherit;
+   border-radius: 10px;
+   width: inherit;
+   height: inherit;
 }
 
 .description {
-    display: none;
-    margin: 0;
-    padding: 0em 1em;
-    border-radius: 7px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.568);
-    font-size: 1em;
-    font-family: cursive;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+   display: none;
+   margin: 0;
+   padding: 0em 1em;
+   border-radius: 7px;
+   color: black;
+   background-color: rgba(255, 255, 255, 0.568);
+   font-size: 1em;
+   font-family: cursive;
+   word-wrap: break-word;
+   overflow-wrap: break-word;
 }
 
 .proposal {
-    margin: 0;
-    padding: 5em 2em;
-    height: auto;
-    text-align: justify;
-    background-color: rgb(2, 54, 83);
-    font-family: 'Courier New';
+   margin: 0;
+   padding: 5em 2em;
+   height: auto;
+   text-align: justify;
+   background-color: rgb(2, 54, 83);
+   font-family: "Courier New";
 }
 
 form {
-    margin: 0;
-    padding: 1em 2em;
-    width: 70vw;
-    border: solid;
-    border-width: 2px;
-    border-radius: 8px;
-    border-color: cornsilk;
-    background-color: rgba(125, 240, 240, 0.815);
-    height: inherit;
-    color: rgba(0, 0, 0, 0.925);
+   margin: 0;
+   padding: 1em 2em;
+   width: 70vw;
+   border: solid;
+   border-width: 2px;
+   border-radius: 8px;
+   border-color: cornsilk;
+   background-color: rgba(125, 240, 240, 0.815);
+   height: inherit;
+   color: rgba(0, 0, 0, 0.925);
 }
 
 label {
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
+   margin: 0;
+   padding: 0;
+   font-size: 1em;
 }
 
 form input {
-    margin: 1em;
-    width: 70%;
-    height: 2em;
-    font-size: 1em;
-    font-family: fantasy;
+   margin: 1em;
+   width: 70%;
+   height: 2em;
+   font-size: 1em;
+   font-family: fantasy;
 }
 
 form input[type="radio"] {
-    height: 1em;
-    width: 1em;
-    text-align: left;
+   height: 1em;
+   width: 1em;
+   text-align: left;
 }
 
-form input[type="radio"]:checked+label {
-    font-weight: bold;
-    font-style: italic;
+form input[type="radio"]:checked + label {
+   font-weight: bold;
+   font-style: italic;
 }
 
 form p {
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
+   margin: 0;
+   padding: 0;
+   font-size: 1em;
 }
 
 form input::placeholder {
-    color: sandybrown;
+   color: sandybrown;
 }
 
 form textarea {
-    margin: 0;
-    padding: 1em 1em;
-    width: 50%;
-    height: 10vh;
+   margin: 0;
+   padding: 1em 1em;
+   width: 50%;
+   height: 10vh;
 }
 
 form button {
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: rgb(55, 255, 55);
-    font-family: monospace;
-    font-size: 1.5em;
-    height: 10vh;
-    width: 15vw;
-    right: 20px;
-    float: right;
+   margin: 0;
+   padding: 0;
+   color: white;
+   background-color: rgb(55, 255, 55);
+   font-family: monospace;
+   font-size: 1.5em;
+   height: 10vh;
+   width: 15vw;
+   right: 20px;
+   float: right;
 }
 
 .feedback {
-    margin: 0;
-    padding: 1em 2em;
-    height: auto;
-    text-align: justify;
-    background-color: rgb(2, 54, 83);
-    font-family: 'Courier New';
-    padding-left: 10vw;
+   margin: 0;
+   padding: 1em 2em;
+   height: auto;
+   text-align: justify;
+   background-color: rgb(2, 54, 83);
+   font-family: "Courier New";
+   padding-left: 10vw;
 }
 
 .feedback form button {
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: rgb(55, 255, 245);
-    font-family: monospace;
-    font-size: 1.5em;
-    height: 10vh;
-    width: 10vw;
-    right: 20px;
-    float: right;
+   margin: 0;
+   padding: 0;
+   color: white;
+   background-color: rgb(55, 255, 245);
+   font-family: monospace;
+   font-size: 1.5em;
+   height: 10vh;
+   width: 10vw;
+   right: 20px;
+   float: right;
 }
 
 .contact {
-    padding: 2em 3em;
-    text-align: center;
+   padding: 2em 3em;
+   text-align: center;
 }
 
 .contact p {
-    font-size: 1em;
-    background-color: rgba(248, 174, 184, 0.925);
-    border-radius: 5px;
+   font-size: 1em;
+   background-color: rgba(248, 174, 184, 0.925);
+   border-radius: 5px;
 }
 
 .copyright {
-    padding: 5em 0em;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.678);
-    font-family: 'Segoe UI';
-    font-size: 1em;
+   padding: 5em 0em;
+   text-align: center;
+   background-color: rgba(255, 255, 255, 0.678);
+   font-family: "Segoe UI";
+   font-size: 1em;
 }
 
 footer {
-    padding: 0;
-    margin: 0;
-    height: 10px;
-    background-color: rgba(72, 206, 230, 0.932);
-    position: relative;
-    align-items: flex-end;
+   padding: 0;
+   margin: 0;
+   height: 10px;
+   background-color: rgba(72, 206, 230, 0.932);
+   position: relative;
+   align-items: flex-end;
 }
 
 @media screen and (max-width: 729px) {
-    .navbar a:not(:first-child) {
-        display: none;
-    }
-    .navbar a.menu--icon {
-        float: right;
-        display: block;
-    }
-    .gallery {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .course-parts {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .browse-courses .courses .course-image {
-        width: 45%;
-        min-width: 45%;
-        max-width: 45%;
-    }
+   .navbar a:not(:first-child) {
+      display: none;
+   }
+   .navbar a.menu--icon {
+      float: right;
+      display: block;
+   }
+   .gallery {
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   .course-parts {
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   .browse-courses .courses .course-image {
+      width: 45%;
+      min-width: 45%;
+      max-width: 45%;
+   }
 }
 
 @media screen and (max-width: 729px) {
-    .navbar.responsive {
-        position: sticky;
-    }
-    .navbar.responsive .menu--icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    form label {
-        padding-right: 1em;
-    }
-    form button {
-        font-size: 1em;
-        width: 20vw;
-    }
-    .feedback {
-        padding: 1em;
-    }
-    .feedback form button {
-        font-size: 1em;
-        width: 20vw;
-    }
-    .feedback form label {
-        font-size: 1em;
-    }
+   .navbar.responsive {
+      position: sticky;
+   }
+   .navbar.responsive .menu--icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+   }
+   .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+   }
+   form label {
+      padding-right: 1em;
+   }
+   form button {
+      font-size: 1em;
+      width: 20vw;
+   }
+   .feedback {
+      padding: 1em;
+   }
+   .feedback form button {
+      font-size: 1em;
+      width: 20vw;
+   }
+   .feedback form label {
+      font-size: 1em;
+   }
 }
 
 .browse-courses {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(55, 255, 245);
+   margin: 0;
+   padding: 0;
+   background-color: rgb(55, 255, 245);
 }
 
 .browse-courses .search-bar {
-    margin: 0;
-    padding: 0;
-    border-bottom: solid;
-    border-bottom-color: rgba(0, 0, 0, 0.9);
-    border-bottom-width: 2px;
-    width: 100vw;
-    display: inline-block;
+   margin: 0;
+   padding: 0;
+   border-bottom: solid;
+   border-bottom-color: rgba(0, 0, 0, 0.9);
+   border-bottom-width: 2px;
+   width: 100vw;
+   display: inline-block;
 }
 
 .browse-courses .search-bar input[type="text"] {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 0;
-    padding: 1em 1em;
-    color: rgba(76, 50, 148, 0.815);
-    font-family: Verdana;
+   margin-left: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-right: 0;
+   padding: 1em 1em;
+   color: rgba(76, 50, 148, 0.815);
+   font-family: Verdana;
 }
 
 .browse-courses .search-bar button[type="submit"] {
-    margin-left: 0;
+   margin-left: 0;
 }
 
 .browse-courses .search-bar button {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 1em 1em;
-    border-radius: 5px;
-    background-color: rgba(76, 50, 148, 0.815);
-    color: white;
-    font-family: fantasy;
+   margin-left: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 1em 1em;
+   border-radius: 5px;
+   background-color: rgba(76, 50, 148, 0.815);
+   color: white;
+   font-family: fantasy;
 }
 
 .browse-courses .courses {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
 }
 
 .browse-courses .courses .course-image {
-    display: flex;
-    margin: 0;
-    padding: 5px;
-    width: 30%;
+   display: flex;
+   margin: 0;
+   padding: 5px;
+   width: 30%;
 }
 
 .browse-courses .courses .course-image img {
-    border-radius: 10px;
-    margin-top: 8px;
-    width: 100%;
-    height: 30vh;
+   border-radius: 10px;
+   margin-top: 8px;
+   width: 100%;
+   height: 30vh;
 }
 
 .course-image:hover .description {
-    display: block;
+   display: block;
 }
 
 .learning {
-    margin: 0;
-    padding: 2em 1em;
-    text-align: justify;
-    background-color: rgb(80, 224, 188);
-    font-family: 'Courier New';
-    color: rgb(255, 255, 255);
+   margin: 0;
+   padding: 2em 1em;
+   text-align: justify;
+   background-color: rgb(80, 224, 188);
+   font-family: "Courier New";
+   color: rgb(255, 255, 255);
 }
 
 .learning .splash-art {
-    padding: 0;
-    border-width: 2px;
-    border-color: white;
-    border-radius: 5px;
-    border: solid;
-    width: 75vw;
-    height: 50vh;
+   padding: 0;
+   border-width: 2px;
+   border-color: white;
+   border-radius: 5px;
+   border: solid;
+   width: 75vw;
+   height: 50vh;
 }
 
 .learning .splash-art img {
-    border-radius: 5px;
+   border-radius: 5px;
 }
 
 .learning .course-description {
-    margin-top: 1em;
-    padding: 1em 1em;
-    width: 80vw;
-    background-color: rgba(45, 124, 104, 0.534);
-    border-radius: 8px;
+   margin-top: 1em;
+   padding: 1em 1em;
+   width: 80vw;
+   background-color: rgba(45, 124, 104, 0.534);
+   border-radius: 8px;
 }
 
 .learning .course-details {
-    margin-top: 1em;
-    margin-right: 0;
-    padding: 1em 2em;
-    width: 50vw;
-    background-color: rgba(164, 230, 213, 0.815);
-    border-radius: 8px;
-    font-size: 1.5em;
-    color: rgba(0, 0, 0, 0.527);
+   margin-top: 1em;
+   margin-right: 0;
+   padding: 1em 2em;
+   width: 50vw;
+   background-color: rgba(164, 230, 213, 0.815);
+   border-radius: 8px;
+   font-size: 1.5em;
+   color: rgba(0, 0, 0, 0.527);
 }
 
 .learning .course-details i {
-    margin: 0;
-    padding: 0.55em 0.25em;
+   margin: 0;
+   padding: 0.55em 0.25em;
 }
 
 .learning .course-details i span {
-    font-style: oblique;
-    padding-left: 0.5em;
-    margin: 0;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
+   font-style: oblique;
+   padding-left: 0.5em;
+   margin: 0;
+   word-wrap: break-word;
+   overflow-wrap: break-word;
+   white-space: pre-wrap;
 }
 
 .learning .course-parts {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
 }
 
 .learning .course-parts .part {
-    margin: 1em;
-    border-radius: 10px;
-    padding: 1.5em;
-    width: 25vw;
-    height: 30vh;
+   margin: 1em;
+   border-radius: 10px;
+   padding: 1.5em;
+   width: 25vw;
+   height: 30vh;
 }
 
 .learning .course-parts .part img {
-    cursor: pointer;
-    min-width: 200px;
-    transition: 0.3s;
+   cursor: pointer;
+   min-width: 200px;
+   transition: 0.3s;
 }
 
 .learning .course-parts .part img:hover {
-    opacity: 0.7;
+   opacity: 0.7;
 }
 
 .learning .course-parts .part .modal--part {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: scroll;
-    background-color: rgba(0, 0, 0, 0.9);
-    animation-name: zoom;
-    animation-duration: 0.5s;
-    color: cyan;
+   display: none;
+   position: fixed;
+   z-index: 1;
+   padding-top: 10vh;
+   padding-bottom: 10vh;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   overflow: scroll;
+   background-color: rgba(0, 0, 0, 0.9);
+   animation-name: zoom;
+   animation-duration: 0.5s;
+   color: cyan;
 }
 
 @keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
+   from {
+      transform: scale(0);
+   }
+   to {
+      transform: scale(1);
+   }
 }
 
 .learning .course-parts .part .close--button {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    transition: 0.3s;
+   position: absolute;
+   top: 15px;
+   right: 35px;
+   color: white;
+   font-size: 1.5em;
+   font-weight: bold;
+   transition: 0.3s;
 }
 
 .learning .course-parts .part .close--button:hover,
 .learning .course-parts .part .close--button:focus {
-    color: rgb(247, 120, 120);
-    text-decoration: none;
-    cursor: pointer;
+   color: rgb(247, 120, 120);
+   text-decoration: none;
+   cursor: pointer;
 }
 
 .learning .course-parts .part .modal--part h1 {
-    text-align: center;
+   text-align: center;
 }
 
 .learning .course-parts .part .modal--part p {
-    size: 1.5em;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
-    padding-bottom: 50px;
+   size: 1.5em;
+   padding-left: 10px;
+   padding-right: 10px;
+   text-align: center;
+   padding-bottom: 50px;
 }
 
 .learning .course-parts .part .modal--part img {
-    width: 80vw;
-    height: 50vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
+   width: 80vw;
+   height: 50vh;
+   margin-left: 5vw;
+   margin-right: 5vw;
 }
 
 .learning .course-parts .part .modal--part img:hover {
-    opacity: 1;
-    cursor: default;
+   opacity: 1;
+   cursor: default;
 }

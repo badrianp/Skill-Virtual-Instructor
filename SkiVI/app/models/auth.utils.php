@@ -2,18 +2,6 @@
 
 session_start();
 
-$CONFIG = [
-    'servername' => "localhost",
-    'username' => "root",
-    'password' => '',
-    'db' => 'skillvirtualinstructor'
-];
-
-$conn = new mysqli($CONFIG["servername"], $CONFIG["username"], $CONFIG["password"], $CONFIG["db"]);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 require_once 'User.php';
 
 function get__user($username, $password)
