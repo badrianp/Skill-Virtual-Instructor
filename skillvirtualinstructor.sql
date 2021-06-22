@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2021 at 01:27 PM
+-- Generation Time: Jun 22, 2021 at 02:14 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -47,7 +47,32 @@ CREATE TABLE `courses` (
 INSERT INTO `courses` (`ID`, `title`, `category`, `author`, `image`, `description`, `duration`, `difficulty`, `parts`, `experience`) VALUES
 (1, 'Learn how to make a paper crane - Origami lesson', 'origami', 'Michael Scofield', 'origami.jpg', 'A simple and easy to follow lesson that will teach you how to create a paper crane using origami, the art of paper folding, which is often associated with Japanese culture.', 30, 'Begginer', 2, 'No prior experience needed'),
 (2, 'Easy paper boat using origami', 'origami', 'Sharleen Astrid', 'boat.jpg', 'A simple and easy to follow lesson that will teach you how to create a paper boat to play with', 10, 'Begginer', 1, 'No prior experience needed'),
-(3, 'Playful paper frog - fun for you or your kids', 'origami', 'Michael Scofield', 'frog.jpg', 'A single lesson that will teach you or your kids how to make some fun and easy paper frogs that actually jump.', 15, 'Begginer', 1, 'No prior experience needed');
+(3, 'Playful paper frog - fun for you or your kids', 'origami', 'Michael Scofield', 'frog.jpg', 'A single lesson that will teach you or your kids how to make some fun and easy paper frogs that actually jump.', 15, 'Begginer', 1, 'No prior experience needed'),
+(4, 'Learn the basics of CPR on adults', 'cpr', 'WikiHow', 'cpr.jpg', 'Learn how to properly help an unconscious person. Please use a mannequin for a more hands-on experience', 45, 'Medium-Har', 2, 'Any medical experience is welcome'),
+(5, 'CPR for children', 'cpr', 'WikiHow', 'cprbaby.jpg', 'A guide to perform CPR on children in case of emergency, please practice using a mannequin for a better learning experience', 45, 'Hard', 1, 'Any prior experience in CPR');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cpr`
+--
+
+CREATE TABLE `cpr` (
+  `id` int(10) NOT NULL,
+  `course_id` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `json` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cpr`
+--
+
+INSERT INTO `cpr` (`id`, `course_id`, `name`, `image`, `json`) VALUES
+(1, 4, 'Basics of CPR on adults', 'cpradult5', 'cpr1'),
+(2, 4, 'How to give rescue breaths to adults', 'cprbreath1', 'cpr3'),
+(3, 5, 'How to perform CPR on a child', 'cprchild6', 'cpr2');
 
 -- --------------------------------------------------------
 
@@ -107,6 +132,14 @@ ALTER TABLE `courses`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `cpr`
+--
+ALTER TABLE `cpr`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `json` (`json`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `origami`
 --
 ALTER TABLE `origami`
@@ -129,7 +162,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
