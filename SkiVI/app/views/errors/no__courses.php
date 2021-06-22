@@ -36,7 +36,7 @@
         <button type="submit"><i class="fa fa-search"></i></button> -->
         <button><a href="<?= $data['syntax'] ?>course/index/origami" id="origami">Origami</a></button>
         <button><a href="<?= $data['syntax'] ?>course/index/cpr" id="cpr">CPR</a></button>
-        <button><a href="<?= $data['syntax'] ?>course/index/harpiscord" id="harpiscord">Harpiscord</a></button>
+        <button><a href="<?= $data['syntax'] ?>course/index/knotting" id="knotting">Knotting</a></button>
         <button><a href="<?= $data['syntax'] ?>course/index/survival" id="survival">Survival</a></button>
     </div>
 
@@ -45,7 +45,7 @@
         <hr class="line-separator"> -->
         <a class="category-button" href="<?= $data['syntax'] ?>course/index/origami" id="origami"> Origami </a>
         <a class="category-button" href="<?= $data['syntax'] ?>course/index/cpr" id="cpr">CPR</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/index/harpiscord" id="harpiscord">Harpiscord</a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/index/knotting" id="knotting">Knotting</a>
         <a class="category-button" href="<?= $data['syntax'] ?>course/index/survival" id="survival">Survival</a>
 
     </div>

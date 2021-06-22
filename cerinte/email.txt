@@ -1,0 +1,26 @@
+In php.ini add the following in the [mail function] part of the document:
+
+SMTP=smtp.gmail.com
+smtp_port=587
+sendmail_from = skivibagrd@gmail.com
+sendmail_path = ""E:\xampp\sendmail\sendmail.exe" -t"
+
+Change sendmail_path to the path you sendmail.exe is in your file system
+
+In sendmail.ini add the following:
+
+smtp_server=smtp.gmail.com
+smtp_port=587
+error_logfile=error.log
+debug_logfile=debug.log
+auth_username=skivibagrd@gmail.com
+auth_password=bagrdskivi
+force_sender=skivibagrd@gmail.com
+
+In both files, if there already are values for those data, please comment or change them to those.
+
+In SkiVI/app/controllers/proposal.php:
+
+change variables $targetDir = "C:/Users/40787/Desktop/TW/New folder/SkiVI/public/uploads/";
+
+in $targetDir = your_path_to_uploads_folder_in_public;

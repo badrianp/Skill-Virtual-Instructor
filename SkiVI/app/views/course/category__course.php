@@ -35,7 +35,7 @@
         <button type="submit"><i class="fa fa-search"></i></button>
         <button id="origami">Origami</button>
         <button id="cpr">CPR</button>
-        <button id="harpiscord">Harpiscord</button>
+        <button id="knotting">Knotting</button>
         <button id="survival">Survival</button>
     </div>
 
@@ -44,7 +44,7 @@
         <hr class="line-separator"> -->
         <a class="category-button" href="<?= $data['syntax'] ?>course/category/origami" id="origami"> Origami </a>
         <a class="category-button" href="<?= $data['syntax'] ?>course/category/cpr" id="cpr">CPR</a>
-        <a class="category-button" href="<?= $data['syntax'] ?>course/category/harpiscord" id="harpiscord">Harpiscord</a>
+        <a class="category-button" href="<?= $data['syntax'] ?>course/category/knotting" id="knotting">Knotting</a>
         <a class="category-button" href="<?= $data['syntax'] ?>course/category/survival" id="survival">Survival</a>
 
     </div>

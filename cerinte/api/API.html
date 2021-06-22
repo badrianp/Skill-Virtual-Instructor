@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservices API Documentation</title>
+</head>
+
+<body>
+    <h1>This page will present the SkiVI's Microservices API</h1>
+    <div class="syntax">
+        <p>Request Syntax: "METHOD" {path?params}</p>
+        <p>For our Microservices: {path} = http://localhost:3000/SkiVI/microservices/{microservice}/api/product/{file}.php</p>
+        <p>{microservice} is one of origamimicroservice, cprmicroservice, knottingmicroservice</p>
+        <p>{file} is one of createLesson, deleteLesson, getAllLessons, getCourseLessons, getSingleLesson, updateLesson</p>
+    </div>
+    <p>Example of API calls</p>
+    <p>Using any other request method than that specified will result in an error message, simmilar to the "Getting all lessons available" failure response</p>
+    <div class="requests">
+        <div class="request">
+            <h2>Getting all lessons available</h2>
+            <p>Uses: getAllLessons with no parameters</p>
+            <p>Request method: "GET"</p>
+            <p>Request: "GET" "http://localhost:3000/SkiVI/microservices/knottingmicroservice/api/product/getAllLessons.php"</p>
+            <p>Expected response:</p>
+            <img src="./allLessonsSucc.jpg">
+            <p>Failure response:</p>
+            <img src="./allLessonsFail.jpg">
+        </div>
+        <div class="request">
+            <h2>Getting all lessons available for a given course</h2>
+            <p>Uses: getCourseLessons with course's id as a parameter (id=course_id)</p>
+            <p>Request method: "GET"</p>
+            <p>Request: "GET" "http://localhost:3000/SkiVI/microservices/knottingmicroservice/api/product/getCourseLessons.php?id=6"</p>
+            <p>Expected response:</p>
+            <img src="./getCoursesSucc.jpg">
+            <p>Failure response:</p>
+            <img src="./getCoursesFail.jpg">
+        </div>
+        <div class="request">
+            <h2>Getting a single lesson</h2>
+            <p>Uses: getSingleLesson with lesson's id as a parameter (id=lesson_id)</p>
+            <p>Request method: "GET"</p>
+            <p>Request: "GET" "http://localhost:3000/SkiVI/microservices/knottingmicroservice/api/product/getSingleLessons.php?id=4"</p>
+            <p>Expected response:</p>
+            <img src="./getLessonSucc.jpg">
+            <p>Failure response:</p>
+            <img src="./getLessonFail.jpg">
+        </div>
+        <div class="request">
+            <h2>Creating a lesson</h2>
+            <p>Uses: createLesson with a JSON as it's body</p>
+            <p>Request method: "POST"</p>
+            <p>Request: "POST" "http://localhost:3000/SkiVI/microservices/knottingmicroservice/api/product/createLesson.php"</p>
+            <p>Body:</p>
+            <img src="./createBody.jpg">
+            <p>Expected response:</p>
+            <img src="./createSucc.jpg">
+            <p>Failure responses:</p>
+            <p>Id already used:</p>
+            <img src="./createIdUsed.jpg">
+            <p>JSON already used:</p>
+            <img src="./createJsonAlreadyUsed.jpg">
+            <p>Incorrect body data:</p>
+            <img src="./createLessonIncorrect.jpg">
+        </div>
+        <div class="request">
+            <h2>Updating a lesson</h2>
+            <p>Uses: updateLesson with a JSON as it's body</p>
+            <p>Request method: "PUT"</p>
+            <p>Request: "PUT" "http://localhost:3000/SkiVI/microservices/knottingmicroservice/api/product/updateLesson.php"</p>
+            <p>Body:</p>
+            <img src="./updateBody.jpg">
+            <p>Expected response:</p>
+            <img src="./updateSuccess.jpg">
+            <p>Failure responses:</p>
+            <p>Failed the updated:</p>
+            <img src="./updateFail.jpg">
+            <p>Incorrect body data:</p>
+            <img src="./updateIncorrect.jpg">
+            <p>Lesson's JSON not found:</p>
+            <img src="./updateNoJSON.jpg">
+        </div>
+        <div class="request">
+            <h2>Deleting a lesson</h2>
+            <p>Uses: deleteLesson with lessons's id as a parameter (id=lesson_id)</p>
+            <p>Request method: "DELETE"</p>
+            <p>Request: "DELETE" "http://localhost:3000/SkiVI/microservices/knottingmicroservice/api/product/deleteLesson.php?id=9"</p>
+            <p>Expected response:</p>
+            <img src="./deleteSucces.jpg">
+            <p>Failure responses:</p>
+            <p>Lesson not found:</p>
+            <img src="./deleteNotFound.jpg">
+            <p>Incorrect parameters:</p>
+            <img src="./deleteIncorrect.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
