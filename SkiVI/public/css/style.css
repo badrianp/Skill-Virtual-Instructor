@@ -1,4 +1,5 @@
 body {
+   width: 100%;
    position: absolute;
    margin: 0;
    background-image: url("../Images/background.png");
@@ -6,14 +7,14 @@ body {
 
 header {
    margin: 0;
-   width: 100vw;
+   width: 100%;
    height: 10px;
    background-color: rgba(72, 206, 230, 0.932);
    position: relative;
 }
 
 .logo {
-   width: 100vw;
+   width: 100%;
    margin: 0;
    background-color: mediumblue;
    color: rgb(250, 250, 123);
@@ -23,7 +24,7 @@ header {
 }
 
 .navbar {
-   width: 100vw;
+   width: 100%;
    margin: 0;
    padding: 0;
    height: 3em;
@@ -70,14 +71,13 @@ header {
 }
 
 main {
-   width: 100vw;
+   width: 100%;
    margin: 0;
    padding: 0;
    display: inline-block;
 }
 
 .informations {
-   width: 100%;
    margin: 0;
    padding: 2em 1em;
    text-align: justify;
