@@ -1,7 +1,7 @@
 <?php
 class Lesson{
     private $conn;
-    private $table_name = "harpiscord";
+    private $table_name = "knotting";
 
     public $id;
     public $course_id;

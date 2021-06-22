@@ -1,0 +1,11 @@
+{
+    "description": "This is one of the most basic and simple knots, yet it is still very useful. The square knot can be used to tie up a tarp, hang up a hammock, and other similar tasks. The purpose of the square knot is to join two ends of rope. The square knot works best when both ends of rope are similar in size, if the rope is too different in size, then the knot will 'knot' hold.",
+    "step1": "1. Hold one end of rope in each hand.",
+    "img1": "square1",
+    "step2": "2. Cross the right working end over then under the left standing end. It should look like the start of tying shoelaces. The ends should have switched hands.",
+    "img2": "square2",
+    "step3": "3. Now do the same action, but backwards. Cross the left working end over then under the right standing end.",
+    "img3": "squareknt",
+    "step4": "4. Pull tight and you are done.",
+    "afterwords": "To untie a Square Knot easily, just pull at the two bends on the left and right side of the knot. After the knot has been loosened, pull apart."
+}

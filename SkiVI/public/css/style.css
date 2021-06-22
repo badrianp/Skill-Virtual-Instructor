@@ -448,9 +448,10 @@ footer {
 .learning .course-parts {
     margin: 0;
     padding: 0;
-    width: 80vw;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .learning .course-parts .part {
@@ -476,11 +477,12 @@ footer {
     position: fixed;
     z-index: 1;
     padding-top: 10vh;
+    padding-bottom: 10vh;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: scroll;
     background-color: rgba(0, 0, 0, 0.9);
     animation-name: zoom;
     animation-duration: 0.5s;
@@ -522,6 +524,7 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .learning .course-parts .part .modal--part img {
@@ -529,4 +532,9 @@ footer {
     height: 50vh;
     margin-left: 5vw;
     margin-right: 5vw;
+}
+
+.learning .course-parts .part .modal--part img:hover {
+    opacity: 1;
+    cursor: default;
 }

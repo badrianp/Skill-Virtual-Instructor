@@ -154,6 +154,9 @@ function generateDOMInfo(JSONResponse, root) {
                                 partDivv[i].appendChild(part);
                             }
                         }
+                        var empty = document.createElement("p");
+                        empty.innerText = " ";
+                        partDivv[i].appendChild(empty);
                         partDiv[i].appendChild(partImg[i]);
                         partDiv[i].appendChild(partDivv[i]);
                         lessons.appendChild(partDiv[i]);

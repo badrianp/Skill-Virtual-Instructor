@@ -1,0 +1,16 @@
+{
+    "description": "The Bowline is a knot that creates a loop in the rope. Can be used to hang something by a rope, tie a loop around a tree or pole, attach a rope to a harness for rock climbing or repelling, or any other task that needs a loop. The important thing about the Bowline is that it is easily untied after a heavy load has been placed on the loop, like hanging from the rope when rock climbing or repelling.",
+    "step1": "1. Create an overhand loop in the rope.",
+    "img1": "bow1",
+    "img2": "bow2",
+    "step2": "2. Take the working end and thread through the loop made in step one.",
+    "img3": "bow3",
+    "step3": "3. Pass the working end around the back of the standing end.",
+    "img4": "bow4",
+    "step4": "4. Thread the working end through the top of the loop created in step one.",
+    "img5": "bow5",
+    "step5": "5. Hold onto to loop and the working end, then pull tight to finish the knot.",
+    "img6": "bow6",
+    "img7": "bowknt",
+    "bruh": "To untie this knot, if the loop is hanging, push the top of the knot away from the loop to loosen the knot. Pull apart and the knot is united. The top is opposite the loop. Using the back of the knot (The last picture) can make this easier."
+}
